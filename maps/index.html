@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Team Syllica | Maps</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content="Team Syllica | Maps" property="og:title">
+        <meta content="Browse our maps on this page!" property="og:description">
+        <meta content="Team Syllica" property="og:site_name">
+        <meta content="https://team-syllica.github.io/assets/img/site_thumbnail.png" property='og:image'>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="/assets/img/syllica_logo.png">
+
+        <script defer src="/script.js"></script>
+        <script defer src="./script.js"></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="main-page-waiting" class="main-page" style="display: block;">
+            Loading...
+        </div>
+        <div id="main-page-grid" class="main-page" style="display: none;">
+            <div class="content">
+                <h1 class="title center-title">Our Maps</h1>
+                <div id="maps-grid" class="maps-grid">
+                    <div class="map-grid-card" map-id="TKL1">
+                        <img class="map-grid-cover-image" src="/maps/TKL1/title.png">
+                        <h2 class="map-grid-title">Map Title</h2>
+                        <p class="map-grid-description">
+                            
+                        </p>
+                        <div class="map-grid-button-panel">
+                            <button class="download-button">Download</button>
+                            <button class="download-button button-blue">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main-page-article" class="main-page" style="display: none;">
+            <div id="content" class="content">
+                <h1 class="title center-title" id="map-title">
+                    <img src="/assets/img/syllica_logo.png" style="height: 1.8em; vertical-align: middle;" draggable="false"><!--
+                 -->Not Found
+                </h1>
+
+                <div class="presentation">
+                    <div id="slideshow">
+                        <div class="map-slideshow-container">
+                            <div id="map-slideshow-slides" style="width: 100%; height: 100%;">
+                                <div class="map-slideshow-slide fade">
+                                    <div class="numbertext">1 / ?</div>
+                                    <div class="map-slideshow-caption">Loading...</div>
+                                </div>
+                            </div>
+                            
+                            <a class="prev" onclick="addSlides(-1)">❮</a>
+                            <a class="next" onclick="addSlides(1)">❯</a>
+                            <div class="slideshow-progress" id="map-slideshow-progress">
+                                <span class="dot" onclick="setCurrentSlide(1)"></span> 
+                                <span class="dot" onclick="setCurrentSlide(2)"></span> 
+                                <span class="dot" onclick="setCurrentSlide(3)"></span> 
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div id="infobox">
+                        <div class="info-card" style="text-align: center;">
+                            <button class="download-button" id="map-download">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>download</title><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" /></svg>
+                                <span>Map Download</span>
+                            </button>
+                            <button class="download-button" id="map-rp">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>download</title><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" /></svg>
+                                <span>Resource Pack</span>
+                            </button>
+                            <button class="download-button button-blue" id="map-servers">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>server-network</title><path d="M13,19H14A1,1 0 0,1 15,20H22V22H15A1,1 0 0,1 14,23H10A1,1 0 0,1 9,22H2V20H9A1,1 0 0,1 10,19H11V17H4A1,1 0 0,1 3,16V12A1,1 0 0,1 4,11H20A1,1 0 0,1 21,12V16A1,1 0 0,1 20,17H13V19M4,3H20A1,1 0 0,1 21,4V8A1,1 0 0,1 20,9H4A1,1 0 0,1 3,8V4A1,1 0 0,1 4,3M9,7H10V5H9V7M9,15H10V13H9V15M5,5V7H7V5H5M5,13V15H7V13H5Z" /></svg>
+                                <span>Server Info</span>
+                            </button>
+                            <button class="download-button button-blue" id="map-shaders">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bee-flower</title><path d="M11.6 13V12.9L11.3 12.6H11.2L9.6 12C10 11.7 10.4 11.5 10.9 11.5C11.4 11.5 11.9 11.7 12.3 12.1C12.7 12.5 12.9 12.9 12.9 13.4C12.9 13.9 12.8 14.3 12.4 14.7L11.6 13M9.7 19.3C9.4 18.3 9.6 17.1 10.4 15.5L11.6 18.6C11.8 19.2 11.6 19.6 11 19.9C10.4 20.2 10 20 9.7 19.3M4.1 13.1C4.3 12.5 4.7 12.3 5.3 12.5L8.5 13.7C6.9 14.5 5.7 14.7 4.7 14.4C4.1 14.1 3.9 13.7 4.1 13.1M12 8.1H11V9.5H10.6C9.5 9.5 8.6 9.9 7.8 10.7L7.4 11.3L6 10.5C5.7 10.4 5.4 10.4 5 10.4C4.4 10.4 3.8 10.6 3.3 11S2.4 11.8 2.2 12.4C2 13.1 2 13.7 2.2 14.4C2.5 15.1 2.8 15.6 3.3 15.9C2.9 17.4 3.2 18.7 4.3 19.8C5.1 20.6 6 21 7.1 21C7.6 21 7.9 21 8.2 20.9C8.8 21.7 9.6 22.2 10.6 22.2C10.9 22.2 11.3 22.2 11.6 22.1C12.2 21.9 12.6 21.5 13 21C13.4 20.4 13.6 19.9 13.6 19.3C13.6 18.9 13.6 18.6 13.5 18.3L12.9 16.9L13.5 16.5C14.3 15.7 14.7 14.6 14.6 13.4H16V12.4H14.4C14 11.2 13.2 10.4 12 10V8.1M17.3 6.8C17.1 6.6 17 6.3 17 6.1C17 5.8 17.1 5.6 17.3 5.4C17.5 5.2 17.7 5.1 18 5.1S18.5 5.2 18.7 5.4C18.9 5.5 19 5.8 19 6.1C19 6.4 18.9 6.6 18.7 6.8C18.5 7 18.3 7 18 7S17.5 7 17.3 6.8M20.7 4.1H19.6L19.3 3.2C19.1 2.5 18.7 2.2 18 2.2C17.3 2.2 16.8 2.5 16.7 3.2L16.4 4.1H15.3C14.7 4.1 14.3 4.4 14 5C13.8 5.6 14 6.1 14.6 6.5L15.5 7L15.1 8.2C14.9 8.6 15 9 15.2 9.4C15.5 9.8 15.8 10 16.3 10C16.7 10 17 9.9 17.2 9.7L18 9.1L18.8 9.8C19 9.9 19.3 10 19.7 10C20.2 10 20.5 9.8 20.8 9.4C21 9 21.1 8.6 20.9 8.2L20.5 7L21.3 6.5C21.9 6.1 22.1 5.6 21.9 5C21.7 4.3 21.3 4.1 20.7 4.1Z" /></svg>
+                                <span>Shader Info</span>
+                            </button>
+                            <button class="download-button button-red" id="map-walkthrough">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>youtube</title><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" /></svg>
+                                <span>Walkthrough</span>
+                            </button>
+                            <!--<button class="download-button button-discord-purple">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -20 127.14 126.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+                                <span>Discord Server</span>
+                            </button>-->
+                            <br><br>
+                            <a href="javascript:void(0)" onclick="showPastVersionsPopup()">Past Versions</a> •
+                            <a href="https://www.minecraftmaps.com/how-to-install-minecraft-maps" target="_blank">Install Guide</a>
+                        </div>
+
+                        <div class="info-card map-stats">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Latest Version:</td>
+                                        <td id="map-stats-mapversion">v1.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minecraft Version:</td>
+                                        <td id="map-stats-mcversion">v1.21.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>File Size: </td>
+                                        <td id="map-stats-filesize"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date Published: </td>
+                                        <td id="map-stats-published"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date Updated: </td>
+                                        <td id="map-stats-updated"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Approx. Playtime: </td>
+                                        <td id="map-stats-playtime">0h</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="info-card">
+                            <u>Tags:</u><br>
+                            <div id="tags">
+                                
+                            </div>
+                        </div>
+
+                        <div class="info-card" id="credits-list" style="max-height: 180px; overflow-y: auto;">
+                            <div class="credits-card">
+                                <canvas class="player-face" width="8" height="8"></canvas>
+                                <b>Stockley_</b>
+                                <span>Director, Textures, Etc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="map-description">
+                    Loading description...
+                </div>
+
+                <h2>Changelog</h2>
+                <div id="map-changelog" class="map-changelog">
+                    <h3>v1.0</h3>
+                    <ul>
+                        <li>Initial Release</li>
+                    </ul>
+                </div>
+
+                <br>
+            </div>
+        </div>
+
+        <div id="overlay" class="overlay" style="display: none;" onclick="closePopup()"></div>
+        <div id="popup" class="popup" style="display: none;">
+            <span class="popup-close-button" onclick="closePopup()">x</span>
+            <div id="popup-content" class="popup-content"></div>
+        </div>
+        <div id="past-versions-popup" class="popup" style="display: none;">
+            <span class="popup-close-button" onclick="closePopup()">x</span>
+            <div class="popup-content">
+                <h2>Past Versions</h2>
+                <table class="past-versions-table">
+                    <thead>
+                        <tr>
+                            <th>Map</th>
+                            <th>Minecraft</th>
+                            <th>Date</th>
+                            <th>Filesize</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="map-past-version-content"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer id="footer"></footer>
+    </body>
+</html>

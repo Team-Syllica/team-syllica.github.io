@@ -1,0 +1,65 @@
+{
+    "//comment": "All usernames in this document are Minecraft Java usernames unless otherwise stated",
+    "Stockley_": {
+        "aliases": [
+            "Stockley"
+        ],
+        "quote": false,
+        "socials": {
+            "twitter": "https://x.com/Stockley_",
+            "youtube": "https://www.youtube.com/@Stockley_",
+            "twitch": "https://www.twitch.tv/Stockley",
+            "discord": "https://discord.com/users/98600312029339648",
+            "url": "https://ko-fi.com/stockley"
+        },
+        "description": "",
+        "roles": [],
+        "team_status": "director"
+    },
+    "InnominateMC": {
+        "aliases": [
+            "Innominate"
+        ],
+        "quote": false,
+        "socials": {
+            "twitter": "https://x.com/Real_INNMNT",
+            "youtube": "https://www.youtube.com/@InnominateYT",
+            "twitch": false,
+            "discord": "https://discord.com/users/307931897659654145",
+            "url": false
+        },
+        "description": "",
+        "roles": [],
+        "team_status": "member"
+    },
+    "PJs": {
+        "aliases": [],
+        "quote": false,
+        "socials": {
+            "twitter": false,
+            "youtube": false,
+            "twitch": false,
+            "discord": false,
+            "url": false
+        },
+        "description": "",
+        "roles": [],
+        "team_status": "member"
+    },
+    "ReBrainer": {
+        "aliases": [
+            "ReBrainerTV"
+        ],
+        "quote": false,
+        "socials": {
+            "twitter": "https://x.com/ReBrainerTV",
+            "youtube": "https://www.youtube.com/@ReBrainerTV",
+            "twitch": "https://twitch.tv/rebrainertv",
+            "discord": "https://discord.com/users/456146351483387924",
+            "url": false
+        },
+        "description": "",
+        "roles": [],
+        "team_status": "member"
+    }
+}

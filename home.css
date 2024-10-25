@@ -1,0 +1,75 @@
+.pre-content {
+    position: relative;
+}
+
+.main-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80pt;
+    margin: 0;
+    width: 80vw;
+    text-align: center;
+}
+
+.main-video {
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    object-fit: cover;
+    object-position: 0px;
+    filter: brightness(0.6) blur(2px);
+    box-shadow: inset 0 0 100px #000;
+}
+
+.down-arrow {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 90px;
+    cursor: pointer;
+}
+
+.down-arrow > svg {
+    opacity: 0.5;
+    transition: 0.4s ease;
+}
+
+.down-arrow:hover > svg {
+    transform: translate(0, 10px);
+    opacity: 0.8;
+}
+
+.team-description {
+    padding: 20px 0px;
+}
+
+.main-content {
+    z-index: -1;
+    margin-top: -10px;
+    font-size: 24pt;
+    padding: 40px;
+}
+
+/* Hide scrollbar on home page */
+::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .title {
+        font-size: 2em;
+    }
+    
+    .main-title {
+        font-size: 50pt;
+    }
+
+    .main-content {
+        font-size: 20pt;
+    }
+
+    
+}

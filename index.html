@@ -1,1 +1,72 @@
-<code>Hello World</code>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Team Syllica | Home</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content="Team Syllica | Home" property="og:title">
+        <meta content="Hey, we're Team Syllica! A group of friends who have been making Minecraft maps with the goal of making the best content we possibly can, while also pushing the boundaries of what makes a great Minecraft map to inspire other members of the community." property="og:description">
+        <meta content="Team Syllica" property="og:site_name">
+        <meta content="https://team-syllica.github.io/assets/img/site_thumbnail.png" property='og:image'>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/home.css">
+        <link rel="icon" href="assets/img/syllica_logo.png">
+
+        <script defer src="script.js"></script>
+        <script defer src="home.js"></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="main-page" class="main-page">
+            <div class="pre-content">
+                <video src="assets/video/stream.mp4" class="main-video" muted autoplay loop></video>
+                <h1 class="title main-title">
+                    <img src="assets/img/syllica_logo.png" style="height: 1.8em; vertical-align: middle;" draggable="false">
+                    Team Syllica
+                </h1>
+                <div class="down-arrow" onclick="document.querySelector('#content h1').scrollIntoView({behavior: 'smooth'})">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="currentColor"><path d="M16 10H17V9H18V7H16V8H15V9H14V10H13V11H12V12H10V11H9V10H8V9H7V8H6V7H4V9H5V10H6V11H7V12H8V13H9V14H10V15H12V14H13V13H14V12H15V11H16" /></svg>
+                </div>
+            </div>
+            <div id="content" class="content main-content">
+                <h1 class="title">Welcome!</h1>
+                <!--We are Team Syllica, a team of Minecraft map-makers who created the hit map series "The Kitatcho Laboratories". We're a North American group of builders, tinkerers and creative souls with a passion for Minecraft map-making and quality content. Insert more corporate jargon here :)-->
+                <p class="team-description">
+                    Hey, we're Team Syllica! A group of friends who have been making Minecraft maps with the goal of making the best content we possibly can, while also pushing the boundaries of what makes a great Minecraft map to inspire other members of the community.
+                    These projects are a labor of love, and we're excited to share them with you! Thanks for visiting our site, and we hope you look forward to future projects we have in store!
+                </p>
+            </div>
+            <div id="our-content" class="content main-content" style="background-color: var(--page-color-2)">
+                <h1 class="title" style="text-align: center;">Our Content</h1>
+                <div id="content-slideshow">
+                    <div class="map-slideshow-container">
+                        <div id="map-slideshow-slides" style="width: 100%; height: 100%;">
+                            <div class="map-slideshow-slide fade">
+                                <div class="numbertext">1 / ?</div>
+                                <div class="map-slideshow-caption">Loading...</div>
+                            </div>
+                            <div class="map-slideshow-slide fade" style="display: flex;">
+                                <div class="numbertext">2 / 5</div>
+                                <img class="map-slideshow-slide-content" src="/maps/TKL1/title.png">
+                            </div>
+                        </div>
+                        
+                        <a class="prev" onclick="addSlides(-1)">❮</a>
+                        <a class="next" onclick="addSlides(1)">❯</a>
+                        <div class="slideshow-progress" id="map-slideshow-progress">
+                            <span class="dot" onclick="setCurrentSlide(1)"></span> 
+                            <span class="dot" onclick="setCurrentSlide(2)"></span> 
+                            <span class="dot" onclick="setCurrentSlide(3)"></span> 
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </body>
+</html>

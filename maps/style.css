@@ -1,0 +1,133 @@
+.maps-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.map-grid-card {
+  max-width: 33%;
+  padding: 10px;
+  background-color: var(--infocard-color);
+  border-radius: 4px;
+}
+
+.map-grid-title {
+  font-family: 'MinecraftFive';
+  margin: 0.4em 0;
+  text-align: center;
+  font-size: 17pt;
+  user-select: none;
+}
+
+.map-grid-description {
+  overflow: hidden;
+}
+
+.map-grid-button-panel {
+  text-align: center;
+  user-select: none;
+}
+
+.map-grid-cover-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  user-select: none;
+}
+
+.past-versions-table {
+  text-align: left;
+  user-select: none;
+}
+
+.past-versions-table th {
+  min-width: 100px;
+}
+
+img {vertical-align: middle;}
+
+.presentation {
+    display: flex;
+}
+
+#slideshow {
+    width: calc(50% - 0px);
+    overflow: hidden;
+    display: inline-block;
+}
+
+.map-slideshow-slide-content {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
+#infobox {
+    width: calc(50% - 0px);
+    overflow: hidden;
+    display: inline-block;
+}
+
+.info-card {
+    margin: 15px;
+    padding: 9px;
+    background-color: var(--infocard-color);
+}
+
+.credits-card {
+    background-color: var(--infocard-subcard-color);
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.player-face {
+	width: 32px;
+	height: 32px;
+	line-height: 30px;
+	margin-top: -5px;
+  image-rendering: pixelated;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 1060px) {
+  #slideshow {
+    width: 100%;
+  }
+
+  #infobox {
+    width: 100%;
+  }
+
+  .presentation {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .map-grid-card {
+    width: 45%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1.title {
+    font-size: 2em;
+  }
+
+  .map-grid-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .download-button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .prev, .next,.map-slideshow-caption {font-size: 11px}
+}

@@ -1,0 +1,401 @@
+{
+    "maps": [
+        {
+            "id": "TKL1",
+            "name": "The Kitatcho Laboratories: Chapter 1",
+            "releases": [
+                {
+                    "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.6", "beta": 0 },
+                        "game": { "data_version": 3700, "version": "1.20.4" }
+                    },
+                    "link": "https://www.mediafire.com/file/8v41yd3jwtpr8yx/%2528v1.6%2529_The_Kitatcho_Laboratories_-_Chapter_1.zip/file",
+                    "mediafire_quickkey": "8v41yd3jwtpr8yx",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.5", "beta": 0 },
+                        "game": { "data_version": 3700, "version": "1.20.4" }
+                    },
+                    "link": "https://www.mediafire.com/file/d6afqaegjdnh0up/%28v1.5%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
+                    "mediafire_quickkey": "d6afqaegjdnh0up",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.4.2", "beta": 0 },
+                        "game": { "data_version": 3120, "version": "1.19.2" }
+                    },
+                    "link": "https://www.mediafire.com/file/vi7w7ummehztylb/%28v1.4.2%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
+                    "mediafire_quickkey": "vi7w7ummehztylb",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.4", "beta": 0 },
+                        "game": { "data_version": 3120, "version": "1.19.2" }
+                    },
+                    "link": "https://www.mediafire.com/file/gb9s22wb9dzon5h/%28v1.4%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
+                    "mediafire_quickkey": "gb9s22wb9dzon5h",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.3", "beta": 0 },
+                        "game": { "data_version": 3105, "version": "1.19" }
+                    },
+                    "link": "https://www.mediafire.com/file/rqseq76y40thcz2/%28v1.3%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
+                    "mediafire_quickkey": "rqseq76y40thcz2",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.2", "beta": 0 },
+                        "game": { "data_version": 3105, "version": "1.19" }
+                    },
+                    "link": "https://www.mediafire.com/file/is19fq9q1yekmc4/%28v1.2%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
+                    "mediafire_quickkey": "is19fq9q1yekmc4",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.1", "beta": 0 },
+                        "game": { "data_version": 2724, "version": "1.17" }
+                    },
+                    "link": "https://www.mediafire.com/file/y8alrqn0zrg98vq/%28v1.1%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
+                    "mediafire_quickkey": "y8alrqn0zrg98vq",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.0", "beta": 0 },
+                        "game": { "data_version": 2580, "version": "1.16.3"  }
+                    },
+                    "link": "https://www.mediafire.com/file/u5mnbm298dn1ood/%28v1.0%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
+                    "mediafire_quickkey": "u5mnbm298dn1ood",
+                    "playtime": 2
+                }
+            ],
+            "resource_pack": {
+                "map_version": "1.6",
+                "link": "https://www.mediafire.com/file/kve9ixzc5150cky/TKL1-v1.6_Resources.zip/file",
+                "mediafire_quickkey": "kve9ixzc5150cky"
+            },
+
+            "tags": [
+                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho"
+            ],
+
+            "credits": [
+                {
+                    "name": "Stockley_",
+                    "roles": ["Director", "Builds", "Textures", "Music", "Storywriting", "Puzzle Design"],
+                    "main_team": true
+                },
+                {
+                    "name": "InnominateMC",
+                    "roles": ["Voice Actor", "Aesthetics"],
+                    "main_team": true
+                },
+                {
+                    "name": "PJs",
+                    "roles": ["Commands", "Datapack"],
+                    "main_team": true
+                },
+                {
+                    "name": "NicoSlayerr",
+                    "roles": ["Builds"],
+                    "main_team": true
+                },
+                {
+                    "name": "ReBrainer",
+                    "roles": ["Commands", "Datapack"],
+                    "main_team": true
+                }
+            ],
+            
+            "slideshow": [
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/pM5lEspRDdM?si=BQJqh8tOUFrRnko3" },
+                { "type": "image", "source": "/maps/TKL1/title.png" },
+                { "type": "image", "source": "/maps/TKL1/showcase_1.png" },
+                { "type": "image", "source": "/maps/TKL1/showcase_2.png" },
+                { "type": "image", "source": "/maps/TKL1/showcase_3.png" }
+            ],
+
+            "server_info": {
+                "type": "popup",
+                "source": "/maps/TKL1/server_info.md"
+            },
+            "shader_info": {
+                "type": "popup",
+                "source": "/maps/TKL1/shader_info.md"
+            },
+
+            "description": "/maps/TKL1/description.md",
+            "changelog": "/maps/TKL1/changelog.md",
+            "walkthrough_link": "https://www.youtube.com/watch?v=b4JWrxRfNfA&list=PLyJqy-phlu3aIpCfQwulaSa8uHS6wnBMc&index=3"
+        },
+        {
+            "id": "TKL2",
+            "name": "The Kitatcho Laboratories: Chapter 2",
+            "releases": [
+                {
+                    "version": {
+                        "map": { "id": "TKL2", "dev": 0, "version": "1.3", "beta": 0 },
+                        "game": { "data_version": 3955, "version": "1.20.6" }
+                    },
+                    "link": "https://www.mediafire.com/file/k5i2ou9vriqnng6/%28v1.3%29_The_Kitatcho_Laboratories_-_Chapter_2.zip/file",
+                    "mediafire_quickkey": "k5i2ou9vriqnng6",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL2", "dev": 0, "version": "1.2", "beta": 0 },
+                        "game": { "data_version": 3337, "version": "1.19.4" }
+                    },
+                    "link": "https://www.mediafire.com/file/brc6xyxqls5obqv/The_Kitatcho_Laboratories_-_Chapter_2_v1.2.zip/file",
+                    "mediafire_quickkey": "brc6xyxqls5obqv",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL2", "dev": 0, "version": "1.1", "beta": 0 },
+                        "game": { "data_version": 2730, "version": "1.17.1" }
+                    },
+                    "link": "https://www.mediafire.com/file/dki206gaadk9sne/The_Kitatcho_Laboratories_-_Chapter_2_%28v1.1%29.zip/file",
+                    "mediafire_quickkey": "dki206gaadk9sne",
+                    "playtime": 2
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL2", "dev": 0, "version": "1.0", "beta": 0 },
+                        "game": { "data_version": 2586, "version": "1.16.5" }
+                    },
+                    "link": "https://www.mediafire.com/file/oymsl9oqvy355px/The_Kitatcho_Laboratories_-_Chapter_2.zip/file",
+                    "mediafire_quickkey": "oymsl9oqvy355px",
+                    "playtime": 2
+                }
+            ],
+            "resource_pack": {
+                "map_version": "1.3",
+                "link": "https://www.mediafire.com/file/8gnjctsl6om0rzn/TKL2-v1.3+Resources.zip/file",
+                "mediafire_quickkey": "8gnjctsl6om0rzn"
+            },
+
+            "tags": [
+                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho"
+            ],
+
+            "credits": [
+                {
+                    "name": "Stockley_",
+                    "roles": ["Director", "Builds", "Textures", "Music", "Storywriting", "Puzzle Design"],
+                    "main_team": true
+                },
+                {
+                    "name": "InnominateMC",
+                    "roles": ["Voice Actor", "Aesthetics"],
+                    "main_team": true
+                },
+                {
+                    "name": "PJs",
+                    "roles": ["Commands", "Datapack", "Physical Animation"],
+                    "main_team": true
+                },
+                {
+                    "name": "ReBrainer",
+                    "roles": ["Commands", "Datapack"],
+                    "main_team": true
+                },
+                {
+                    "name": "CornWienerDog",
+                    "roles": ["Alpha Testing"],
+                    "main_team": true
+                }
+            ],
+
+            "cover": { "type": "image", "source": "/maps/TKL2/title.png" },
+            "slideshow": [
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/5NV-6MkYVhk?si=Ae-wtsEp2D7CcV3N" },
+                { "type": "image", "source": "/maps/TKL2/showcase_1.png" },
+                { "type": "image", "source": "/maps/TKL2/showcase_2.png" },
+                { "type": "image", "source": "/maps/TKL2/showcase_3.png" }
+            ],
+
+            "server_info": {
+                "type": "popup",
+                "source": "/maps/TKL2/server_info.md"
+            },
+            "shader_info": {
+                "type": "popup",
+                "source": "/maps/TKL2/shader_info.md"
+            },
+
+            "description": "/maps/TKL2/description.md",
+            "changelog": "/maps/TKL2/changelog.md"
+        },
+        {
+            "id": "TKL3",
+            "name": "The Kitatcho Laboratories: Chapter 3",
+            "releases": [
+                {
+                    "version": {
+                        "map": { "id": "TKL3", "dev": 0, "version": "1.2.1", "beta": 0 },
+                        "game": { "data_version": 3953, "version": "1.21" }
+                    },
+                    "link": "https://www.mediafire.com/file/9y44qi3er1dxjyc/%28v1.2.1%29_The_Kitatcho_Laboratories_3.zip/file",
+                    "mediafire_quickkey": "9y44qi3er1dxjyc",
+                    "playtime": 6
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL3", "dev": 0, "version": "1.1", "beta": 0 },
+                        "game": { "data_version": 3700, "version": "1.20.4" }
+                    },
+                    "link": "https://www.mediafire.com/file/mou19quzm5rd3fa/%28v1.1%29_The_Kitatcho_Laboratories_-_Chapter_3.zip/file",
+                    "mediafire_quickkey": "mou19quzm5rd3fa",
+                    "playtime": 6
+                },
+                {
+                    "version": {
+                        "map": { "id": "TKL3", "dev": 0, "version": "1.0", "beta": 0 },
+                        "game": { "data_version": 3700, "version": "1.20.4" }
+                    },
+                    "link": "https://www.mediafire.com/file/83ruu68wfx2cunj/The_Kitatcho_Laboratories_3_1.0_Release.zip/file",
+                    "mediafire_quickkey": "83ruu68wfx2cunj",
+                    "playtime": 6
+                }
+            ],
+            "resource_pack": {
+                "map_version": "1.2.1",
+                "link": "https://www.mediafire.com/file/not54uizv3ry12q/TKL3-v1.2.1_Resources.zip/file",
+                "mediafire_quickkey": "not54uizv3ry12q"
+            },
+
+            "tags": [
+                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho"
+            ],
+
+            "credits": [
+                {
+                    "name": "Stockley_",
+                    "roles": ["Director", "Builds", "Textures", "Music", "Storywriting", "Puzzle Design"],
+                    "main_team": true
+                },
+                {
+                    "name": "InnominateMC",
+                    "roles": ["Voice Actor", "Aesthetics", "[REDACTED]"],
+                    "main_team": true
+                },
+                {
+                    "name": "ReBrainer",
+                    "roles": ["Commands", "Datapack", "Alpha Testing", "Gameplay Animation"],
+                    "main_team": true
+                },
+                {
+                    "name": "PJs",
+                    "roles": ["Commands", "Datapack", "Physical Animation"],
+                    "main_team": true
+                },
+                {
+                    "name": "Moenyana",
+                    "roles": ["Artwork"],
+                    "main_team": false
+                }
+            ],
+
+            "server_info": {
+                "type": "popup",
+                "source": "/maps/TKL3/server_info.md"
+            },
+            "shader_info": {
+                "type": "popup",
+                "source": "/maps/TKL3/shader_info.md"
+            },
+            
+            "slideshow": [
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/CglE6b5qeS8?si=7WQ69s2cYVSAlgy_" },
+                { "type": "image", "source": "/maps/TKL3/title.png" },
+                { "type": "image", "source": "/maps/TKL3/showcase_1.png" },
+                { "type": "image", "source": "/maps/TKL3/showcase_2.png" },
+                { "type": "image", "source": "/maps/TKL3/showcase_3.png" }
+            ],
+
+            "description": "/maps/TKL3/description.md",
+            "changelog": "/maps/TKL3/changelog.md",
+            "walkthrough_link": "https://youtube.com/playlist?list=PLyJqy-phlu3byJToR_IU-hFzQmgI45QTV"
+        },
+        {
+            "id": "TKL4",
+            "name": "The Kitatcho Laboratories: Chapter 4",
+            "releases": [
+                {
+                    "version": {
+                        "map": {
+                            "id": "TKL4",
+                            "dev": 0,
+                            "version": "1.0",
+                            "beta": 0
+                        },
+                        "game": {
+                            "data_version": 3953,
+                            "version": "1.21"
+                        }
+                    },
+                    "publish_timestamp": 0,
+                    "link": "",
+                    "size": ""
+                }
+            ],
+
+            "tags": [
+                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho"
+            ],
+
+            "credits": [
+                {
+                    "name": "Stockley_",
+                    "roles": ["Director", "Builds", "Textures", "Music", "Storywriting", "Puzzle Design"],
+                    "main_team": true
+                },
+                {
+                    "name": "InnominateMC",
+                    "roles": ["Voice Actor", "Aesthetics", "[REDACTED]"],
+                    "main_team": true
+                },
+                {
+                    "name": "ReBrainer",
+                    "roles": ["Commands", "Datapack", "Alpha Testing", "Gameplay Animation"],
+                    "main_team": true
+                },
+                {
+                    "name": "PJs",
+                    "roles": ["Commands", "Datapack"],
+                    "main_team": true
+                },
+                {
+                    "name": "Moenyana",
+                    "roles": ["Artwork"],
+                    "main_team": false
+                }
+            ],
+            
+            "slideshow": [
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/KW5D7bv8jfE" },
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/rAi35-iixPw" },
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/93oxrZE9eA4" },
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/9XiLl2XqbAI" },
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/aSlnwUKZbBk" },
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/mRL9LkutjZs" },
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/TFhBVL8jpRs" },
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/dMIMe3AOt6s" },
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/PFYlkuLR2Mw" },
+                { "type": "image", "source": "/maps/TKL4/icon.png", "pixelated": true }
+            ],
+
+            "description": "/maps/TKL4/description.md",
+            "hide_in_grid": true
+        }
+    ]
+}
