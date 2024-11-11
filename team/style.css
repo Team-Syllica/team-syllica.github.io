@@ -1,0 +1,89 @@
+.team-card {
+    width: 100%;
+    background-color: var(--page-color-2);
+    padding: 20px;
+    min-height: 250px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.team-card-roles {
+    font-size: 0.8em;
+}
+
+.team-card-content {
+    width: 100%;
+}
+
+.team-card-image {
+    height: 250px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    display: inline-block;
+    filter: drop-shadow(-14px -3px 7px var(--player-shadow-color));
+    user-select: none;
+}
+
+.team-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team-card-top-right {
+    user-select: none;
+}
+
+.team-card-social-link {
+    width: 25px;
+    cursor: pointer;
+}
+
+.team-card-social-link:hover {
+    filter: drop-shadow(0px 0px 6px black)
+}
+
+.team-card-name {
+    margin: 0px 0px 4px 0px;
+    font-size: 2em;
+}
+
+.team-card-infobar {
+    margin: 3px 0px;
+    font-size: 0.8em;
+    font-family: 'MinecraftFive';
+}
+
+.team-card-infobar > span {
+    font-family: 'MinecraftFive';
+}
+
+.team-card-quote {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 1060px) {
+
+}
+  
+@media only screen and (max-width: 800px) {
+    .team-card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 450px) {
+    .team-card-top {
+        display: unset;
+        text-align: center;
+    }
+
+    .team-card-top-right {
+        text-align: center;
+    }
+}

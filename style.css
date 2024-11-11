@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'MinecraftFive';
-    src: url(assets/fonts/minecraft-five.ttf);
+    src: url(/assets/fonts/minecraft-five.ttf);
 }
 
 @font-face {
     font-family: 'MinecraftSeven';
-    src: url(assets/fonts/minecraft-seven.ttf);
+    src: url(/assets/fonts/minecraft-seven.ttf);
 }
 
 @font-face {
     font-family: 'MinecraftTen';
-    src: url(assets/fonts/minecraft-ten.ttf);
+    src: url(/assets/fonts/minecraft-ten.ttf);
 }
 
 * {
@@ -54,6 +54,8 @@
 
     --infocard-color: #595959;
     --infocard-subcard-color: #6d6d6d;
+
+    --player-shadow-color: #252525;
 }
 
 body {

@@ -1,10 +1,11 @@
 {
     "//comment": "All usernames in this document are Minecraft Java usernames unless otherwise stated",
     "Stockley_": {
+        "pronouns": "he / him",
         "aliases": [
             "Stockley"
         ],
-        "quote": false,
+        "quote": "\"I have no idea what I'm doing.\"",
         "socials": {
             "twitter": "https://x.com/Stockley_",
             "youtube": "https://www.youtube.com/@Stockley_",
@@ -12,15 +13,24 @@
             "discord": "https://discord.com/users/98600312029339648",
             "url": "https://ko-fi.com/stockley"
         },
-        "description": "",
-        "roles": [],
-        "team_status": "director"
+        "description": "Since 2012, Stockley has been designing Minecraft maps, transforming what began as a hobby into a passion for creating immersive experiences. In 2018, he took things to the next level by founding Team Syllica, setting out to treat Minecraft maps as more than just gameplay spaces—crafting them with the care and depth of standalone games.\n\nWith this focus on quality, Stockley has driven Team Syllica to new heights, most notably with the success of the Kitatcho Laboratories series. Along the way, he expanded his creative toolkit, developing skills in storytelling, pixel art for custom textures, and composing original music to bring each project to life. Through these efforts and the support of the community, Team Syllica continues to push boundaries, with many exciting new ideas on the horizon.",
+        "roles": [
+            "Team Director",
+            "Creative Director",
+            "Lead Writer",
+            "Resource Pack Artist",
+            "Music & Sound Designer"
+        ],
+        "team_status": "director",
+        "member_since": 2018,
+        "picture": "/assets/img/team/Stockley_.png"
     },
     "InnominateMC": {
+        "pronouns": "he / they",
         "aliases": [
             "Innominate"
         ],
-        "quote": false,
+        "quote": "\"You see it too? For me, it's always like this.\"",
         "socials": {
             "twitter": "https://x.com/Real_INNMNT",
             "youtube": "https://www.youtube.com/@InnominateYT",
@@ -28,29 +38,44 @@
             "discord": "https://discord.com/users/307931897659654145",
             "url": false
         },
-        "description": "",
-        "roles": [],
-        "team_status": "member"
+        "description": "Innominate is a mixed-media actor, published poet, comedian, improviser, director and possible vampire who's been working on environments in Minecraft maps since 2014. He is a cum laude graduate of the University of North Carolina at Chapel Hill with Highest Honors degrees in Creative Writing and Dramatic Art–in other words, he likes writing and theatre a whole lot. If you've ever stumbled upon something extraordinarily cursed in a Team Syllica project, chances are it's a nonzero amount their fault. They're probably making a pasta sauce as you read this bio.",
+        "roles": [
+            "Voice Actor",
+            "Environment Designer",
+            "Builder",
+            "Writing Contributer",
+            "Director/Designer of Kitatcho Land",
+            "Trailer Editing"
+        ],
+        "team_status": "member",
+        "member_since": 2018,
+        "picture": "/assets/img/team/InnominateMC.png"
     },
     "PJs": {
+        "pronouns": "they / them",
         "aliases": [],
-        "quote": false,
+        "quote": "\"pls rember that wen u feel hungri or starve \\ never forget ttimes wen u eat shrimp fry and coirssant \\ wen tummy is empty alway rember yummy day\"",
         "socials": {
             "twitter": false,
             "youtube": false,
             "twitch": false,
             "discord": false,
-            "url": false
+            "url": "https://pjs.moe"
         },
-        "description": "",
-        "roles": [],
-        "team_status": "member"
+        "description": "Hello~ I'm PJs! I first got into mapmaking in 2014 when Stockley invited me to join his team, and I've been assisting with the team's projects ever since. In my free time, I enjoy playing MMOs and rhythm games, as well as watching anime and vtubers. Nice to meet you!",
+        "roles": [
+            "Tech"
+        ],
+        "team_status": "member",
+        "member_since": 2018,
+        "picture": "/assets/img/team/PJs.png"
     },
     "ReBrainer": {
+        "pronouns": "he / him",
         "aliases": [
             "ReBrainerTV"
         ],
-        "quote": false,
+        "quote": "\"99 critical bugs in the code, 99 critical bugs. Track one down, patch it when found, 100 critical bugs in the code.\"",
         "socials": {
             "twitter": "https://x.com/ReBrainerTV",
             "youtube": "https://www.youtube.com/@ReBrainerTV",
@@ -58,8 +83,19 @@
             "discord": "https://discord.com/users/456146351483387924",
             "url": false
         },
-        "description": "",
-        "roles": [],
-        "team_status": "member"
+        "description": "ReBrainer (also known online as ReBrainerTV or \"Reb\") is a Minecraft enthusiast and command block enjoyer. He made his debut with the team back in 2021, porting Chapter 1 to Bedrock Edition to be sold on the Minecraft Marketplace. Eventually joining the team as a full member, ReBrainer has been responsible for writing a lot of the code for The Kitatcho Laboratories: Chapters 3 and 4. His contributions to Team Syllica content include many hours of behind-the-scenes restructuring, testing and maintenance to keep everything polished as Minecraft evolves as a game. In his spare time, he enjoys playing jazz trumpet.",
+        "roles": [
+            "Tech",
+            "Playtesting",
+            "Character Animation",
+            "Debugging & Optimization",
+            "External Tools",
+            "Website Design",
+            "Project Management",
+            "Chapter 4 Lead Developer"
+        ],
+        "team_status": "member",
+        "member_since": 2023,
+        "picture": "/assets/img/team/ReBrainer.png"
     }
 }
