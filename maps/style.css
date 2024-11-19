@@ -91,6 +91,25 @@ img {vertical-align: middle;}
   vertical-align: middle;
 }
 
+#credits-list {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.credits-card-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.credits-card-social-link {
+  width: 25px;
+  cursor: pointer;
+}
+
+.credits-card-social-link:hover {
+  filter: drop-shadow(0px 0px 6px black)
+}
+
 @media only screen and (max-width: 1060px) {
   #slideshow {
     width: 100%;
@@ -125,6 +144,14 @@ img {vertical-align: middle;}
 
   .download-button {
     width: 100%;
+  }
+
+  .info-card {
+    margin: 15px 0px;
+  }
+
+  #credits-list {
+    max-height: unset;
   }
 }
 

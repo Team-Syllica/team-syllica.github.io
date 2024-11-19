@@ -121,7 +121,7 @@ function loadArticle() {
       document.getElementById('map-stats-updated').innerHTML = updatedDate;
 
       document.getElementById("map-download").onclick = function() {
-        window.open(latestRelease.link)
+        downloadRelease(latestRelease, true);
       }
     })
   } else {
@@ -202,9 +202,16 @@ function loadArticle() {
   document.getElementById("credits-list").innerHTML = "";
   for(let entry of articleData.credits) {
     let trueEntry = Object.assign((Object.keys(teamData).includes(entry.name) ? teamData[entry.name] : {}), entry)
+    console.log(trueEntry);
 
     let card = document.createElement("div");
     card.classList = ['credits-card'];
+
+    let card_top = document.createElement("div");
+    card_top.classList = ['credits-card-title'];
+
+    let card_name = document.createElement("div");
+    card_name.classList = ['credits-card-name'];
 
     let faceEl = document.createElement('canvas');
     faceEl.classList = ['player-face'];
@@ -224,23 +231,42 @@ function loadArticle() {
         ctx.drawImage(img, 40, 8, 8, 8, 0, 0, faceEl.width, faceEl.height);
       }
     }
-    fetch('https://api.ashcon.app/mojang/v2/user/' + entry.name).then((response) => response.json()).then(data => {
-      drawFace('data:image/png;base64,' + data.textures.skin.data)
-    })
+    if(trueEntry.skin) {
+      // Use the predefined skin file present in the user data
+      drawFace(trueEntry.skin)
+    } else {
+      // Fetch the last known skin from the Minecraft: Java Edition username using the ashcon.app API
+      fetch('https://api.ashcon.app/mojang/v2/user/' + trueEntry.name).then((response) => response.json()).then(data => {
+        drawFace('data:image/png;base64,' + data.textures.skin.data)
+      })
+    }
 
-    card.appendChild(faceEl);
-
-    card.appendChild(document.createTextNode(" "));
+    card_name.appendChild(faceEl);
+    card_name.appendChild(document.createTextNode(" "));
 
     let playername = document.createElement("b");
-    playername.innerHTML = entry.name;
-    card.appendChild(playername);
+    playername.innerHTML = trueEntry.name;
+    card_name.appendChild(playername);
+    card_top.appendChild(card_name);
 
-    card.appendChild(document.createElement("br"));
+    // Render socials
+    let card_socials = document.createElement("div");
+    card_socials.classList = ['credits-card-socials'];
+
+    let socials = trueEntry.socials || {};
+    card_socials.append(generateSocials(socials, 'credits-card-social-link'));
+    card_top.appendChild(card_socials);
+
+    card.appendChild(card_top);
     
+    let card_description = document.createElement("div");
+    card_description.classList = ['credits-card-description'];
+
     let roles = document.createElement("span");
     roles.innerHTML = trueEntry.roles.join(", ");
-    card.appendChild(roles);
+    card_description.appendChild(roles);
+
+    card.appendChild(card_description);
 
     document.getElementById("credits-list").appendChild(card);
   }
@@ -326,7 +352,17 @@ function loadArticle() {
       date.innerHTML = dateString;
     })
 
-    row.appendChild(createCell("<a href='"+ release_entry.link +"' target='_blank'>MediaFire</a>"))
+    let linkCell = document.createElement("td");
+    let link = document.createElement('a');
+    link.onclick = function() {
+      downloadRelease(release_entry);
+    }
+    link.innerHTML = 'Download';
+    link.href = 'javascript:void(0)';
+
+    linkCell.appendChild(link);
+    row.appendChild(linkCell);
+
     document.getElementById("map-past-version-content").appendChild(row);
   }
 }
@@ -356,11 +392,12 @@ async function getArticle() {
         articleData = data;
 
         // Determine what to do with the page
+        initializeArticle();
         if(params.has('download')) {
           if(params.get('download') == 'latest') {
             // Download the latest release
             let latestRelease = articleData.releases[0];
-            location.href = latestRelease.link;
+            downloadRelease(latestRelease);
           } else if(params.get('download') == 'rp' && articleData.resource_pack) {
             // Download the resource pack
             location.href = articleData.resource_pack.link;
@@ -370,15 +407,15 @@ async function getArticle() {
             let release = articleData.releases.find(entry => entry.version.map.version == targetVersion) || false;
             if(!release) {
               // No release found that specifies the download version, load article instead
-              initializeArticle();
+              
               return;
             } else {
-              location.href = release.link;
+              // A release object was found, download it
+              downloadRelease(release)
             }
           }
         } else {
           // The parameters do not have a download argument, load the article as-is
-          initializeArticle();
           return;
         }
 
@@ -414,6 +451,26 @@ async function getArticle() {
 }
 
 getArticle()
+
+// Download
+function downloadRelease(releaseobj, new_window = false) {
+  if(!releaseobj.warning) {
+    if(new_window){
+      window.open(releaseobj.link);
+    } else {
+      location.href = releaseobj.link;
+    }
+  } else {
+    fetch(releaseobj.warning.source).then((response) => response.text()).then((mdData) => {
+      let renderedPage = markdownit({html: true}).render(mdData);
+
+      renderedPage += '<br><button class="download-button" id="map-download" onclick="downloadRelease({link: \''+ releaseobj.link +'\'}, '+ new_window +')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>download</title><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></path></svg><span>Map Download</span></button>';
+
+      closePopup()
+      showPopup(renderedPage)
+    })
+  }
+}
 
 // Slideshow
 let slideIndex = 1;

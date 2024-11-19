@@ -11,7 +11,7 @@
                     },
                     "link": "https://www.mediafire.com/file/8v41yd3jwtpr8yx/%2528v1.6%2529_The_Kitatcho_Laboratories_-_Chapter_1.zip/file",
                     "mediafire_quickkey": "8v41yd3jwtpr8yx",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -20,7 +20,7 @@
                     },
                     "link": "https://www.mediafire.com/file/d6afqaegjdnh0up/%28v1.5%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
                     "mediafire_quickkey": "d6afqaegjdnh0up",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -29,7 +29,7 @@
                     },
                     "link": "https://www.mediafire.com/file/vi7w7ummehztylb/%28v1.4.2%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
                     "mediafire_quickkey": "vi7w7ummehztylb",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -38,7 +38,7 @@
                     },
                     "link": "https://www.mediafire.com/file/gb9s22wb9dzon5h/%28v1.4%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
                     "mediafire_quickkey": "gb9s22wb9dzon5h",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -47,7 +47,7 @@
                     },
                     "link": "https://www.mediafire.com/file/rqseq76y40thcz2/%28v1.3%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
                     "mediafire_quickkey": "rqseq76y40thcz2",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -56,7 +56,7 @@
                     },
                     "link": "https://www.mediafire.com/file/is19fq9q1yekmc4/%28v1.2%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
                     "mediafire_quickkey": "is19fq9q1yekmc4",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -65,7 +65,7 @@
                     },
                     "link": "https://www.mediafire.com/file/y8alrqn0zrg98vq/%28v1.1%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
                     "mediafire_quickkey": "y8alrqn0zrg98vq",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -74,7 +74,7 @@
                     },
                     "link": "https://www.mediafire.com/file/u5mnbm298dn1ood/%28v1.0%29_The_Kitatcho_Laboratories_-_Chapter_One.zip/file",
                     "mediafire_quickkey": "u5mnbm298dn1ood",
-                    "playtime": 2
+                    "playtime": 2.5
                 }
             ],
             "resource_pack": {
@@ -106,7 +106,8 @@
                 {
                     "name": "NicoSlayerr",
                     "roles": ["Builds"],
-                    "main_team": true
+                    "main_team": true,
+                    "skin": "/assets/img/skins/NicoSlayerr.png"
                 },
                 {
                     "name": "ReBrainer",
@@ -147,7 +148,7 @@
                     },
                     "link": "https://www.mediafire.com/file/k5i2ou9vriqnng6/%28v1.3%29_The_Kitatcho_Laboratories_-_Chapter_2.zip/file",
                     "mediafire_quickkey": "k5i2ou9vriqnng6",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -156,7 +157,7 @@
                     },
                     "link": "https://www.mediafire.com/file/brc6xyxqls5obqv/The_Kitatcho_Laboratories_-_Chapter_2_v1.2.zip/file",
                     "mediafire_quickkey": "brc6xyxqls5obqv",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -165,7 +166,7 @@
                     },
                     "link": "https://www.mediafire.com/file/dki206gaadk9sne/The_Kitatcho_Laboratories_-_Chapter_2_%28v1.1%29.zip/file",
                     "mediafire_quickkey": "dki206gaadk9sne",
-                    "playtime": 2
+                    "playtime": 2.5
                 },
                 {
                     "version": {
@@ -174,7 +175,7 @@
                     },
                     "link": "https://www.mediafire.com/file/oymsl9oqvy355px/The_Kitatcho_Laboratories_-_Chapter_2.zip/file",
                     "mediafire_quickkey": "oymsl9oqvy355px",
-                    "playtime": 2
+                    "playtime": 2.5
                 }
             ],
             "resource_pack": {
@@ -211,7 +212,8 @@
                 {
                     "name": "CornWienerDog",
                     "roles": ["Alpha Testing"],
-                    "main_team": true
+                    "main_team": true,
+                    "skin": "/assets/img/skins/CornWienerDog.png"
                 }
             ],
 
@@ -246,7 +248,10 @@
                     },
                     "link": "https://www.mediafire.com/file/9y44qi3er1dxjyc/%28v1.2.1%29_The_Kitatcho_Laboratories_3.zip/file",
                     "mediafire_quickkey": "9y44qi3er1dxjyc",
-                    "playtime": 6
+                    "playtime": 8,
+                    "//warning": {
+                        "source": "/maps/TKL3/warnings/download.md"
+                    }
                 },
                 {
                     "version": {
@@ -255,7 +260,7 @@
                     },
                     "link": "https://www.mediafire.com/file/mou19quzm5rd3fa/%28v1.1%29_The_Kitatcho_Laboratories_-_Chapter_3.zip/file",
                     "mediafire_quickkey": "mou19quzm5rd3fa",
-                    "playtime": 6
+                    "playtime": 8
                 },
                 {
                     "version": {
@@ -264,7 +269,7 @@
                     },
                     "link": "https://www.mediafire.com/file/83ruu68wfx2cunj/The_Kitatcho_Laboratories_3_1.0_Release.zip/file",
                     "mediafire_quickkey": "83ruu68wfx2cunj",
-                    "playtime": 6
+                    "playtime": 8
                 }
             ],
             "resource_pack": {
@@ -299,9 +304,13 @@
                     "main_team": true
                 },
                 {
-                    "name": "Moenyana",
+                    "name": "moenyana",
                     "roles": ["Artwork"],
-                    "main_team": false
+                    "main_team": false,
+                    "skin": "/assets/img/skins/moenyana.png",
+                    "socials": {
+                        "instagram": "https://instagram.com/moenyana/"
+                    }
                 }
             ],
 

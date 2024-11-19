@@ -301,10 +301,18 @@ a[href] {
     background-color: var(--page-color);
     color: var(--font-color);
     min-width: 500px;
-    padding: 20px;
+    padding: 0;
     z-index: 3;
     max-height: 90vh;
+    overflow: hidden;
+}
+
+.popup-content {
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 30px;
     overflow-y: auto;
+    overflow-x: auto;
 }
 
 .popup-close-button {

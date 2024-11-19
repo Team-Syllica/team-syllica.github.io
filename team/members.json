@@ -1,5 +1,4 @@
 {
-    "//comment": "All usernames in this document are Minecraft Java usernames unless otherwise stated",
     "Stockley_": {
         "pronouns": "he / him",
         "aliases": [
@@ -10,6 +9,7 @@
             "twitter": "https://x.com/Stockley_",
             "youtube": "https://www.youtube.com/@Stockley_",
             "twitch": "https://www.twitch.tv/Stockley",
+            "instagram": false,
             "discord": "https://discord.com/users/98600312029339648",
             "url": "https://ko-fi.com/stockley"
         },
@@ -23,7 +23,8 @@
         ],
         "team_status": "director",
         "member_since": 2018,
-        "picture": "/assets/img/team/Stockley_.png"
+        "picture": "/assets/img/team/Stockley_.png",
+        "skin": "/assets/img/skins/Stockley_.png"
     },
     "InnominateMC": {
         "pronouns": "he / they",
@@ -36,20 +37,22 @@
             "youtube": "https://www.youtube.com/@InnominateYT",
             "twitch": false,
             "discord": "https://discord.com/users/307931897659654145",
+            "instagram": false,
             "url": false
         },
-        "description": "Innominate is a mixed-media actor, published poet, comedian, improviser, director and possible vampire who's been working on environments in Minecraft maps since 2014. He is a cum laude graduate of the University of North Carolina at Chapel Hill with Highest Honors degrees in Creative Writing and Dramatic Art–in other words, he likes writing and theatre a whole lot. If you've ever stumbled upon something extraordinarily cursed in a Team Syllica project, chances are it's a nonzero amount their fault. They're probably making a pasta sauce as you read this bio.",
+        "description": "Innominate is a mixed-media actor, published poet, comedian, improviser, director and possible vampire who's been working on environments in Minecraft maps since 2014. He is a cum laude graduate of the University of North Carolina at Chapel Hill with Highest Honors degrees in Creative Writing and Dramatic Art--in other words, he likes writing and theatre a whole lot. If you've ever stumbled upon something extraordinarily cursed in a Team Syllica project, chances are it's a nonzero amount their fault. They're probably making a pasta sauce as you read this bio.",
         "roles": [
             "Voice Actor",
             "Environment Designer",
             "Builder",
-            "Writing Contributer",
+            "Writing Contributor",
             "Director/Designer of Kitatcho Land",
             "Trailer Editing"
         ],
         "team_status": "member",
         "member_since": 2018,
-        "picture": "/assets/img/team/InnominateMC.png"
+        "picture": "/assets/img/team/InnominateMC.png",
+        "skin": "/assets/img/skins/InnominateMC.png"
     },
     "PJs": {
         "pronouns": "they / them",
@@ -59,6 +62,7 @@
             "twitter": false,
             "youtube": false,
             "twitch": false,
+            "instagram": false,
             "discord": false,
             "url": "https://pjs.moe"
         },
@@ -68,7 +72,8 @@
         ],
         "team_status": "member",
         "member_since": 2018,
-        "picture": "/assets/img/team/PJs.png"
+        "picture": "/assets/img/team/PJs.png",
+        "skin": "/assets/img/skins/PJs.png"
     },
     "ReBrainer": {
         "pronouns": "he / him",
@@ -80,6 +85,7 @@
             "twitter": "https://x.com/ReBrainerTV",
             "youtube": "https://www.youtube.com/@ReBrainerTV",
             "twitch": "https://twitch.tv/rebrainertv",
+            "instagram": false,
             "discord": "https://discord.com/users/456146351483387924",
             "url": false
         },
@@ -96,6 +102,7 @@
         ],
         "team_status": "member",
         "member_since": 2023,
-        "picture": "/assets/img/team/ReBrainer.png"
+        "picture": "/assets/img/team/ReBrainer.png",
+        "skin": "/assets/img/skins/ReBrainer.png"
     }
 }
