@@ -1,3 +1,15 @@
+### v1.2.2
+- Updated to Minecraft 1.21.4
+- Fixed an issue in Sharpshooter where a mystery target could respawn itself
+- Updated redstone torch texture to reflect the new Minecraft redstone torches
+- Updated Piano Roll texture in the Haunted Mansion
+- Fixed an issue where some decorative speakers could be clicked
+- Adjustments and improvements to the post-Kitatcho Land hallways
+- Fixed an issue where the first Slimeball dispenser in Chamber 10 was not locked
+- Fixed several issues related to the Kitatcho Land door
+- Updated map links to point to the Team Syllica website
+- Several quality improvements
+
 ### v1.2.1
 - Fixed a missing spawn chunk in the Boiler Room
 - Item frames can no longer be rotated

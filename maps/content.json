@@ -243,15 +243,24 @@
             "releases": [
                 {
                     "version": {
+                        "map": { "id": "TKL3", "dev": 0, "version": "1.2.2", "beta": 0 },
+                        "game": { "data_version": 4189, "version": "1.21.4" }
+                    },
+                    "link": "https://www.mediafire.com/file/2ms1bf0wa9n9ti0/%28v1.2.2%29_The_Kitatcho_Laboratories_3.zip/file",
+                    "mediafire_quickkey": "2ms1bf0wa9n9ti0",
+                    "playtime": 8,
+                    "//warning": {
+                        "source": "/maps/TKL3/warnings/download.md"
+                    }
+                },
+                {
+                    "version": {
                         "map": { "id": "TKL3", "dev": 0, "version": "1.2.1", "beta": 0 },
                         "game": { "data_version": 3953, "version": "1.21" }
                     },
                     "link": "https://www.mediafire.com/file/9y44qi3er1dxjyc/%28v1.2.1%29_The_Kitatcho_Laboratories_3.zip/file",
                     "mediafire_quickkey": "9y44qi3er1dxjyc",
-                    "playtime": 8,
-                    "//warning": {
-                        "source": "/maps/TKL3/warnings/download.md"
-                    }
+                    "playtime": 8
                 },
                 {
                     "version": {
@@ -273,9 +282,9 @@
                 }
             ],
             "resource_pack": {
-                "map_version": "1.2.1",
-                "link": "https://www.mediafire.com/file/not54uizv3ry12q/TKL3-v1.2.1_Resources.zip/file",
-                "mediafire_quickkey": "not54uizv3ry12q"
+                "map_version": "1.2.2",
+                "link": "https://www.mediafire.com/file/57ad99s6sgbygth/TKL3-v1.2.2_Resources.zip/file",
+                "mediafire_quickkey": "57ad99s6sgbygth"
             },
 
             "tags": [
