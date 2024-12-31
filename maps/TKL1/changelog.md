@@ -1,3 +1,15 @@
+### v1.7
+- Updated to Minecraft v1.21.4
+- Item indicators for chests now have a metallic texture
+- Item indicators can no longer be rotated
+- Updated Redstone Torch textures to match modern versions of Minecraft
+- Updated Redstone Dust texture for parity with Chapter 3
+- Updated Music Disc texture for parity with Chapter 3
+- Retextured speakers around the map
+- Slimeballs can no longer be destroyed by lava and will now return themselves to you when thrown into lava
+- Added debug menu, accessible with `/function debug:menu`
+- Additional continuity changes and fixes
+
 ### v1.6
 - Dozens of design tweaks for consistency with Chapters 2 and 3
 - Added another fire resistance plate to Chamber 15 to smoothen the puzzle
