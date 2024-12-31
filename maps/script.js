@@ -202,7 +202,6 @@ function loadArticle() {
   document.getElementById("credits-list").innerHTML = "";
   for(let entry of articleData.credits) {
     let trueEntry = Object.assign((Object.keys(teamData).includes(entry.name) ? teamData[entry.name] : {}), entry)
-    console.log(trueEntry);
 
     let card = document.createElement("div");
     card.classList = ['credits-card'];

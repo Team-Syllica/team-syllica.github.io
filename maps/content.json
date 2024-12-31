@@ -6,6 +6,15 @@
             "releases": [
                 {
                     "version": {
+                        "map": { "id": "TKL1", "dev": 0, "version": "1.7", "beta": 0 },
+                        "game": { "data_version": 4189, "version": "1.21.4" }
+                    },
+                    "link": "https://www.mediafire.com/file/mrkmdadq21fqlss/(v1.7)+The+Kitatcho+Laboratories+1.zip/file",
+                    "mediafire_quickkey": "mrkmdadq21fqlss",
+                    "playtime": 2.5
+                },
+                {
+                    "version": {
                         "map": { "id": "TKL1", "dev": 0, "version": "1.6", "beta": 0 },
                         "game": { "data_version": 3700, "version": "1.20.4" }
                     },

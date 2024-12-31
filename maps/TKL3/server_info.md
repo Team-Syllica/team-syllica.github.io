@@ -1,5 +1,5 @@
 # Server Information
-The Kitatcho Laboratories: Chapter 3 is a single-player experience and was not intended for multiple people. However, we recognize that people often like to play with friends and so ahve done our best to accomodate this in this release! Here's a few tips you should know. 
+The Kitatcho Laboratories: Chapter 3 is a single-player experience and was not intended for multiple people. However, we recognize that people often like to play with friends and so have done our best to accomodate this in this release! Here's a few tips you should know. 
 
 In general, <span style="color: red;">**always treat challenges as a single-player experience**</span> for maximum enjoyment and avoiding exploits!
 
