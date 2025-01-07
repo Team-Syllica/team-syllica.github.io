@@ -1,3 +1,24 @@
+### v1.4
+- Updated to Minecraft 1.21.4
+- Updated the redstone torch texture for parity with Chapters 1 and 3
+- Added an option in the rules to skip the map intro
+- Dozens of under-the-hood optimizations and tweaks
+- Multiplayer optimizations
+  - Attractor pads now only teleport the player who shot them
+  - Dropping the Kitatcho Quality Bow will give a bow to each player, but only one physical arrow can exist at a time
+  - Levers will now always return to the player with the lockpick
+  - The lockpick can now be passed between nearby players by dropping it
+  - **Remember to treat the map as a solo experience if you're playing with multiple people!**
+- Added a ledge for a moving platform in Chamber 11 (Verticality)
+- Added symbols in the Chamber 12 field for colorblind accessibility
+- Adjusted the timing of a door in Chamber 14
+- Added a couple of missing plate dings in Chamber 14
+- Added a warning if the player attempts to start the map in an incompatible Minecraft version
+- Fixed piston sounds so that they play at the correct volume
+- Arrows no longer despawn
+- Updated debug menu
+- Updated map links to point to the Team Syllica website
+
 ### v1.3
 - Updated to Minecraft v1.20.6
 - Roundabout, Ironworks and Verticality have been re-ordered

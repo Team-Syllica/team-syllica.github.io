@@ -11,13 +11,16 @@ In general, <span style="color: red;">**always treat challenges as a single-play
   - Function permission level is 2
   - Spawn protection is off
   - View distance is set to 10 or more
-  - Simulation distance is set to 10 or more
+  - Simulation distance is set to 8 or more
 - Make sure your server is on the correct Minecraft version (this should be apparent on the map download page).
 - Make sure you're not playing with any mods that change vanilla gameplay
 - Everyone should have the resource pack installed. There's a download link in the map's setup instructions, and there should also be one available on this website.
 
 ## Multiplayer Best Practices
-- The tools you pick up in the map cannot be transfered by throwing, so use chests to exchange who has which tools
+- You can throw the Super-Legal Lockpick in the map to transfer it to nearby friends!
+  - Levers will always go to the player holding the lockpick
+  - These items still can't be used on pressure plates
+- A copy of the Kitatcho Quality Bow will be given to both players, however only one arrow can exist at a time so as to not break any puzzles 
 - Always walk through doors together to avoid having one person be locked out of areas
 - If one person dies, the other one should meet them at the spawn point to keep things fair
 - **Always treat challenges as a single-player experience** for maximum enjoyment and avoiding exploits!
