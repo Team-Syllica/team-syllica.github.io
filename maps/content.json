@@ -3,7 +3,7 @@
         {
             "id": "TKL1",
             "name": "The Kitatcho Laboratories: Chapter 1",
-            "cover": { "type": "image", "source": "/maps/TKL1/title.png" },
+            "cover": { "type": "image", "source": "/maps/TKL1/cover.png" },
             "icon": { "type": "image", "source": "/maps/TKL1/icon.png" },
 
             "releases": [
@@ -152,7 +152,7 @@
         {
             "id": "TKL2",
             "name": "The Kitatcho Laboratories: Chapter 2",
-            "cover": { "type": "image", "source": "/maps/TKL2/title.png" },
+            "cover": { "type": "image", "source": "/maps/TKL2/cover.png" },
             "icon": { "type": "image", "source": "/maps/TKL2/icon.png" },
 
             "releases": [
@@ -263,7 +263,7 @@
         {
             "id": "TKL3",
             "name": "The Kitatcho Laboratories: Chapter 3",
-            "cover": { "type": "image", "source": "/maps/TKL3/title.png" },
+            "cover": { "type": "image", "source": "/maps/TKL3/cover.png" },
             "icon": { "type": "image", "source": "/maps/TKL3/icon.png" },
 
             "releases": [
@@ -373,7 +373,7 @@
         {
             "id": "TKL4",
             "name": "The Kitatcho Laboratories: Chapter 4",
-            "cover": { "type": "image", "source": "/maps/TKL4/icon.png" },
+            "cover": { "type": "image", "source": "/maps/TKL4/cover.png" },
             "icon": { "type": "image", "source": "/maps/TKL4/icon.png" },
 
             "releases": [
