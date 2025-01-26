@@ -1,21 +1,6 @@
-function getExternalContent(page, callback = function(htmltext){}) {
-    let request = new XMLHttpRequest();
-    request.onreadystatechange = function() {
-        if(this.readyState == 4) {
-            if(this.status == 200) {
-                callback(this.responseText)
-            } else {
-                console.error('404 Not found: ' + page)
-            }
-        }
-    };
-    request.open("GET", page, true);
-    request.send()
-}
-
-function embedScript(source) { // Embeds a script in the header of the page
+function embedScript(source, defer = true) { // Embeds a script in the header of the page
     let script = document.createElement("script");
-    script.defer = true;
+    script.defer = defer;
     script.src = source;
     document.head.appendChild(script);
 }
@@ -24,13 +9,19 @@ function init() {
     // Initialize and build the website by adding embedded code
 
     // Add markdown.js to the page
-    embedScript('/assets/js/markdown.js')
+    /*embedScript('/assets/js/markdown-it.js', true)
+    embedScript('/assets/js/markdown-it-named-headers.js', true)
+    embedScript('/assets/js/markdown-handler.js', true)*/
 
     // Navbar
-    getExternalContent('/navbar.html', (response) => {document.getElementById("navbar").innerHTML = response;})
+    fetch('/navbar.html').then((response) => response.text()).then((content) => {
+        document.getElementById("navbar").innerHTML = content;
+    })
 
     // Footer
-    getExternalContent('/footer.html', (response) => {document.getElementById("footer").innerHTML = response;})
+    fetch('/footer.html').then((response) => response.text()).then((content) => {
+        document.getElementById("footer").innerHTML = content;
+    })
 }
 
 init()

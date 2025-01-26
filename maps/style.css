@@ -110,6 +110,38 @@ img {vertical-align: middle;}
   filter: drop-shadow(0px 0px 6px black)
 }
 
+.map-changelog *.target {
+  animation-name: changelog-title-fade;
+  animation-duration: 2s;
+}
+
+.map-changelog *:target {
+  animation-name: changelog-title-fade;
+  animation-duration: 2s;
+}
+
+@keyframes changelog-title-fade {
+  10% {
+    background-color: transparent;
+    color: unset;
+  }
+
+  30% {
+    background-color: var(--target-select-color);
+    color: white;
+  }
+
+  80% {
+    background-color: var(--target-select-color);
+    color: white;
+  }
+
+  100% {
+    background-color: transparent;
+    color: unset;
+  }
+}
+
 @media only screen and (max-width: 1060px) {
   #slideshow {
     width: 100%;

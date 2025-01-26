@@ -34,7 +34,7 @@ function loadGrid() {
     description.classList = ['map-grid-description'];
     description.innerHTML = "Loading description...";
     fetch(map.description).then(response => response.text()).then((desc) => {
-      let descHtml = markdownit({html: true}).render(desc)
+      let descHtml = markdown.render(desc)
       let descText = descHtml.replace(/<[^>]*>/g, '')
       let cutText = (descText.length < 300 ? descText : descText.substring(0, 300) + " ...")
 
@@ -67,7 +67,7 @@ function loadGrid() {
   document.getElementById("maps-grid").append(grid)
 }
 
-function loadArticle() {
+async function loadArticle() {
   // Switch the page to Article Mode
   document.getElementById("main-page-waiting").style.display = 'none';
   document.getElementById("main-page-grid").style.display = 'none';
@@ -78,17 +78,15 @@ function loadArticle() {
   document.title = "Team Syllica | " + articleData.name;
 
   // Description
-  getExternalContent(articleData.description, (content => {
-    let renderedDescription = markdownit({html: true}).render(content)
-    document.getElementById("map-description").innerHTML = renderedDescription
-  }));
+  let descriptionContent = await fetch(articleData.description).then((responseContent) => responseContent.text());
+  let renderedDescription = markdown.render(descriptionContent)
+  document.getElementById("map-description").innerHTML = renderedDescription;
 
   // Changelog
   if(articleData.changelog) {
-    getExternalContent(articleData.changelog, (content => {
-      let renderedChangelog = markdownit({html: true}).render(content);
-      document.getElementById("map-changelog").innerHTML = renderedChangelog;
-    }));
+    let changelogContent = await fetch(articleData.changelog).then((responseContent) => responseContent.text());
+    let renderedChangelog = markdown.render(changelogContent)
+    document.getElementById("map-changelog").innerHTML = renderedChangelog;
   }
 
   // Tags
@@ -154,7 +152,7 @@ function loadArticle() {
     if(articleData.server_info.type === 'popup') {
       // Fetch data
       fetch(articleData.server_info.source).then((response) => response.text()).then((mdData) => {
-        let renderedPage = markdownit({html: true}).render(mdData);
+        let renderedPage = markdown.render(mdData);
 
         document.getElementById("map-servers").onclick = function() {
           showPopup(renderedPage)
@@ -174,7 +172,7 @@ function loadArticle() {
     if(articleData.shader_info.type === 'popup') {
       // Fetch data
       fetch(articleData.shader_info.source).then((response) => response.text()).then((mdData) => {
-        let renderedPage = markdownit({html: true}).render(mdData);
+        let renderedPage = markdown.render(mdData);
 
         document.getElementById("map-shaders").onclick = function() {
           showPopup(renderedPage)
@@ -272,57 +270,57 @@ function loadArticle() {
 
   // Slideshow
   if(articleData.slideshow) {
-      document.getElementById("map-slideshow-slides").innerHTML = "";
-      document.getElementById("map-slideshow-progress").innerHTML = "";
-  
-      for(let i = 0; i < articleData.slideshow.length; i++) {
-          let slidedata = articleData.slideshow[i];
+    document.getElementById("map-slideshow-slides").innerHTML = "";
+    document.getElementById("map-slideshow-progress").innerHTML = "";
 
-          let dot = document.createElement("span")
-          dot.classList = ["dot"];
-          dot.setAttribute("onclick", "setCurrentSlide(" + (i + 1) + ")");
-          document.getElementById("map-slideshow-progress").append(dot)
+    for(let i = 0; i < articleData.slideshow.length; i++) {
+      let slidedata = articleData.slideshow[i];
 
-          let slide = document.createElement("div");
-          slide.classList = ['map-slideshow-slide fade'];
-          let progresslabel = document.createElement('div');
-          progresslabel.classList = ['numbertext'];
-          progresslabel.innerHTML = (i + 1) + " / " + articleData.slideshow.length
-          slide.appendChild(progresslabel);
+      let dot = document.createElement("span")
+      dot.classList = ["dot"];
+      dot.setAttribute("onclick", "setCurrentSlide(" + (i + 1) + ")");
+      document.getElementById("map-slideshow-progress").append(dot)
 
-          if(slidedata.type === 'image') {
-              let content = document.createElement("img");
-              content.classList = ['map-slideshow-slide-content'];
+      let slide = document.createElement("div");
+      slide.classList = ['map-slideshow-slide fade'];
+      let progresslabel = document.createElement('div');
+      progresslabel.classList = ['numbertext'];
+      progresslabel.innerHTML = (i + 1) + " / " + articleData.slideshow.length
+      slide.appendChild(progresslabel);
 
-              content.src = slidedata.source;
-              if(slidedata.pixelated) content.style.imageRendering = 'pixelated';
-              slide.appendChild(content)
-          } else if (slidedata.type === 'youtube_embed') {
-              let content = document.createElement("iframe");
-              content.classList = ['map-slideshow-slide-content'];
+      if(slidedata.type === 'image') {
+        let content = document.createElement("img");
+        content.classList = ['map-slideshow-slide-content'];
 
-              content.src = slidedata.source;
-              content.setAttribute("title", "YouTube video player");
-              content.setAttribute("frameborder", "0");
-              content.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
-              content.setAttribute("referrerpolicy", "strict-origin-when-cross-origin")
-              content.setAttribute("allowfullscreen", "")
+        content.src = slidedata.source;
+        if(slidedata.pixelated) content.style.imageRendering = 'pixelated';
+        slide.appendChild(content)
+      } else if (slidedata.type === 'youtube_embed') {
+        let content = document.createElement("iframe");
+        content.classList = ['map-slideshow-slide-content'];
 
-              slide.appendChild(content)
-          }
+        content.src = slidedata.source;
+        content.setAttribute("title", "YouTube video player");
+        content.setAttribute("frameborder", "0");
+        content.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        content.setAttribute("referrerpolicy", "strict-origin-when-cross-origin")
+        content.setAttribute("allowfullscreen", "")
 
-          if(slidedata.caption) {
-              let cap = document.createElement("div");
-              cap.classList = ['map-slideshow-caption']
-              cap.innerHTML = slidedata.caption;
-              slide.appendChild(cap);
-          }
-
-          document.getElementById("map-slideshow-slides").appendChild(slide)
+        slide.appendChild(content)
       }
 
-      let slideIndex = 1;
-      showSlides(slideIndex);
+      if(slidedata.caption) {
+        let cap = document.createElement("div");
+        cap.classList = ['map-slideshow-caption']
+        cap.innerHTML = slidedata.caption;
+        slide.appendChild(cap);
+      }
+
+      document.getElementById("map-slideshow-slides").appendChild(slide)
+    }
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
   }
 
   // Past versions popup
@@ -364,6 +362,8 @@ function loadArticle() {
 
     document.getElementById("map-past-version-content").appendChild(row);
   }
+
+  return;
 }
 
 async function getArticle() {
@@ -371,82 +371,85 @@ async function getArticle() {
 
   let params = new URLSearchParams(location.search);
 
+  contentData = await fetch('./content.json').then(resp => resp.json());
+  loadGrid();
+
   // No id parameter
   if(!params.has("id")){
-    getExternalContent('./content.json', (content => {
-      contentData = JSON.parse(content)
-      loadGrid();
-    }))
-
     return false;
   }
 
-  // Has an id parameter
-  getExternalContent('./content.json', (content => {
-      contentData = JSON.parse(content)
+  // The ID specified exists
+  let data = contentData.maps.find(map => params.get("id") == map.id)
+  if(data){
+    articleData = data;
 
-      // The ID specified exists
-      let data = contentData.maps.find(map => params.get("id") == map.id)
-      if(data){
-        articleData = data;
-
-        // Determine what to do with the page
-        initializeArticle();
-        if(params.has('download')) {
-          if(params.get('download') == 'latest') {
-            // Download the latest release
-            let latestRelease = articleData.releases[0];
-            downloadRelease(latestRelease);
-          } else if(params.get('download') == 'rp' && articleData.resource_pack) {
-            // Download the resource pack
-            location.href = articleData.resource_pack.link;
-          } else {
-            // Find the specified version
-            let targetVersion = params.get('download')
-            let release = articleData.releases.find(entry => entry.version.map.version == targetVersion) || false;
-            if(!release) {
-              // No release found that specifies the download version, load article instead
-              
-              return;
-            } else {
-              // A release object was found, download it
-              downloadRelease(release)
-            }
-          }
-        } else {
-          // The parameters do not have a download argument, load the article as-is
-          return;
-        }
-
-        function initializeArticle() {
-          loadArticle();
-          if(params.has('server_info') && articleData.server_info) {
-            if(articleData.server_info.type === 'popup') {
-              // Fetch data
-              fetch(articleData.server_info.source).then((response) => response.text()).then((mdData) => {
-                let renderedPage = markdownit({html: true}).render(mdData);
-                showPopup(renderedPage)
-              })
-            } else if(articleData.server_info.type === 'link') {
-              location.href = articleData.server_info.source
-            }
-          } else if(params.has('shader_info') && articleData.shader_info) {
-            if(articleData.shader_info.type === 'popup') {
-              // Fetch data
-              fetch(articleData.shader_info.source).then((response) => response.text()).then((mdData) => {
-                let renderedPage = markdownit({html: true}).render(mdData);
-                showPopup(renderedPage)
-              })
-            } else if(articleData.shader_info.type === 'link') {
-              location.href = articleData.shader_info.source
-            }
-          }
-        }
+    // Determine what to do with the page
+    await initializeArticle();
+    if(params.has('download')) {
+      if(params.get('download') == 'latest') {
+        // Download the latest release
+        let latestRelease = articleData.releases[0];
+        downloadRelease(latestRelease);
+      } else if(params.get('download') == 'rp' && articleData.resource_pack) {
+        // Download the resource pack
+        location.href = articleData.resource_pack.link;
       } else {
-        loadGrid();
-        return;
+        // Find the specified version
+        let targetVersion = params.get('download')
+        let release = articleData.releases.find(entry => entry.version.map.version == targetVersion) || false;
+        if(!release) {
+          // No release found that specifies the download version, load article instead
+          
+          return;
+        } else {
+          // A release object was found, download it
+          downloadRelease(release)
+        }
       }
-  }))
+    } else {
+      // The parameters do not have a download argument, load the article as-is
+
+      // Scroll to the hash and apply animation
+      let referencedElement = document.getElementById(location.hash.replace("#", ""))
+      if(referencedElement) {
+        referencedElement.scrollIntoViewIfNeeded({behavior:'smooth'});
+        referencedElement.classList.toggle('target', true)
+        //referencedElement.nextElementSibling.classList.toggle('target', true)
+      }
+      return;
+    }
+
+    async function initializeArticle() {
+      await loadArticle();
+      if(params.has('walktrhough') && articleData.walkthrough_link) {
+        location.href = articleData.walkthrough_link
+      } else if(params.has('server_info') && articleData.server_info) {
+        if(articleData.server_info.type === 'popup') {
+          // Fetch data
+          fetch(articleData.server_info.source).then((response) => response.text()).then((mdData) => {
+            let renderedPage = markdown.render(mdData);
+            showPopup(renderedPage)
+          })
+        } else if(articleData.server_info.type === 'link') {
+          location.href = articleData.server_info.source
+        }
+      } else if(params.has('shader_info') && articleData.shader_info) {
+        if(articleData.shader_info.type === 'popup') {
+          // Fetch data
+          fetch(articleData.shader_info.source).then((response) => response.text()).then((mdData) => {
+            let renderedPage = markdown.render(mdData);
+            showPopup(renderedPage)
+          })
+        } else if(articleData.shader_info.type === 'link') {
+          location.href = articleData.shader_info.source
+        }
+      }
+    }
+  } else {
+    loadGrid();
+    return;
+  }
 }
 
 getArticle()
@@ -461,7 +464,7 @@ function downloadRelease(releaseobj, new_window = false) {
     }
   } else {
     fetch(releaseobj.warning.source).then((response) => response.text()).then((mdData) => {
-      let renderedPage = markdownit({html: true}).render(mdData);
+      let renderedPage = markdown.render(mdData);
 
       renderedPage += '<br><button class="download-button" id="map-download" onclick="downloadRelease({link: \''+ releaseobj.link +'\'}, '+ new_window +')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>download</title><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></path></svg><span>Map Download</span></button>';
 

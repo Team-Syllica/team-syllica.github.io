@@ -48,7 +48,7 @@
 .main-content {
     z-index: -1;
     margin-top: -10px;
-    font-size: 24pt;
+    font-size: 20pt;
     padding: 40px;
 }
 
@@ -70,6 +70,4 @@
     .main-content {
         font-size: 20pt;
     }
-
-    
 }

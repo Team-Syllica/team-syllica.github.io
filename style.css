@@ -17,6 +17,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -56,6 +57,8 @@
     --infocard-subcard-color: #6d6d6d;
 
     --player-shadow-color: #252525;
+
+    --target-select-color: #28621b;
 }
 
 body {
@@ -368,7 +371,7 @@ a[href] {
 .slideshow-progress {
     text-align: center;
     position: absolute;
-    bottom: 30px;
+    bottom: 2%;
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -388,11 +391,13 @@ a[href] {
 /* Caption text */
 .map-slideshow-caption {
     color: #f2f2f2;
+    background-color: #2525257e;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     width: 100%;
+    height: max(15%, 50px);
     text-align: center;
 }
 
