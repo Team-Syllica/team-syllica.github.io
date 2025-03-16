@@ -9,6 +9,7 @@
   padding: 10px;
   background-color: var(--infocard-color);
   border-radius: 4px;
+  margin: 3px 2px;
 }
 
 .map-grid-title {
@@ -176,6 +177,8 @@ img {vertical-align: middle;}
 
   .download-button {
     width: 100%;
+    padding: 8px;
+    margin-top: 5px;
   }
 
   .info-card {

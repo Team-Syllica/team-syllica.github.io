@@ -96,7 +96,7 @@
             },
 
             "tags": [
-                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho"
+                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho", "team_syllica"
             ],
 
             "credits": [
@@ -147,7 +147,8 @@
 
             "description": "/maps/TKL1/description.md",
             "changelog": "/maps/TKL1/changelog.md",
-            "walkthrough_link": "https://www.youtube.com/watch?v=b4JWrxRfNfA&list=PLyJqy-phlu3aIpCfQwulaSa8uHS6wnBMc&index=3"
+            "walkthrough_link": "https://www.youtube.com/watch?v=b4JWrxRfNfA&list=PLyJqy-phlu3aIpCfQwulaSa8uHS6wnBMc&index=3",
+            "promotion": false
         },
         {
             "id": "TKL2",
@@ -209,7 +210,7 @@
             },
 
             "tags": [
-                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho"
+                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho", "team_syllica"
             ],
 
             "credits": [
@@ -258,7 +259,8 @@
             },
 
             "description": "/maps/TKL2/description.md",
-            "changelog": "/maps/TKL2/changelog.md"
+            "changelog": "/maps/TKL2/changelog.md",
+            "promotion": false
         },
         {
             "id": "TKL3",
@@ -314,7 +316,7 @@
             },
 
             "tags": [
-                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho"
+                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho", "team_syllica"
             ],
 
             "credits": [
@@ -368,7 +370,8 @@
 
             "description": "/maps/TKL3/description.md",
             "changelog": "/maps/TKL3/changelog.md",
-            "walkthrough_link": "https://youtube.com/playlist?list=PLyJqy-phlu3byJToR_IU-hFzQmgI45QTV"
+            "walkthrough_link": "https://youtube.com/playlist?list=PLyJqy-phlu3byJToR_IU-hFzQmgI45QTV",
+            "promotion": false
         },
         {
             "id": "TKL4",
@@ -442,7 +445,76 @@
             ],
 
             "description": "/maps/TKL4/description.md",
-            "hide_in_grid": true
+            "hide_in_grid": true,
+            "promotion": false
+        },
+        {
+            "id": "TCC1",
+            "name": "The Color Complex",
+            "cover": { "type": "image", "source": "/maps/TCC1/cover.png" },
+            "icon": { "type": "image", "source": "/maps/TCC1/icon.png" },
+
+            "releases": [
+                {
+                    "version": {
+                        "map": {
+                            "id": "TCC1",
+                            "dev": 0,
+                            "version": "1.0",
+                            "beta": 0
+                        },
+                        "game": {
+                            "data_version": 2586,
+                            "version": "1.16.5"
+                        }
+                    },
+                    "publish_timestamp": 0,
+                    "link": "https://www.mediafire.com/file/kl4vf8ank13ml1o/The_Color_Complex.zip/file",
+                    "mediafire_quickkey": "kl4vf8ank13ml1o",
+                    "playtime": 5,
+                    "warning": {
+                        "source": "/maps/TCC1/warnings/download.md"
+                    }
+                }
+            ],
+            
+            "resource_pack": {
+                "map_version": "1.0",
+                "link": "https://www.mediafire.com/file/v4xo17jjwkn7185/The_Color_Complex_-_Resources.zip/file",
+                "mediafire_quickkey": "v4xo17jjwkn7185"
+            },
+
+            "tags": [
+                "singleplayer", "multiplayer", "parkour", "custom_music", "custom_textures", "color_complex"
+            ],
+
+            "credits": [
+                {
+                    "name": "Stockley_",
+                    "roles": ["Director", "Builds", "Textures", "Music", "Level Design"],
+                    "main_team": true
+                },
+                {
+                    "name": "PJs",
+                    "roles": ["Commands", "Datapack"],
+                    "main_team": true
+                }
+            ],
+
+            "slideshow": [
+                { "type": "image", "source": "/maps/TCC1/showcase_1.png" },
+                { "type": "image", "source": "/maps/TCC1/showcase_2.png" },
+                { "type": "image", "source": "/maps/TCC1/showcase_3.png" }
+            ],
+
+            "server_info": {
+                "type": "popup",
+                "source": "/maps/TCC1/server_info.md"
+            },
+
+            "description": "/maps/TCC1/description.md",
+            "hide_in_grid": false,
+            "promotion": false
         }
     ]
 }

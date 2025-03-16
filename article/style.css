@@ -1,0 +1,13 @@
+.content {
+    font-size: 1.2em;
+}
+
+table {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+table td, th {
+    border: 1px solid white;
+    padding: 4px;
+}

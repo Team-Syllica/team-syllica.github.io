@@ -413,7 +413,7 @@ async function getArticle() {
       // Scroll to the hash and apply animation
       let referencedElement = document.getElementById(location.hash.replace("#", ""))
       if(referencedElement) {
-        referencedElement.scrollIntoViewIfNeeded({behavior:'smooth'});
+        referencedElement.scrollIntoView({behavior:'smooth'});
         referencedElement.classList.toggle('target', true)
         //referencedElement.nextElementSibling.classList.toggle('target', true)
       }
