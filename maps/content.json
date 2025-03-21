@@ -460,6 +460,24 @@
                         "map": {
                             "id": "TCC1",
                             "dev": 0,
+                            "version": "1.1",
+                            "beta": 0
+                        },
+                        "game": {
+                            "data_version": 4189,
+                            "version": "1.21.4"
+                        }
+                    },
+                    "publish_timestamp": 0,
+                    "link": "https://www.mediafire.com/file/wqe6jyxwtcvwa7r/(v1.1)+The+Color+Complex.zip/file",
+                    "mediafire_quickkey": "wqe6jyxwtcvwa7r",
+                    "playtime": 1.5
+                },
+                {
+                    "version": {
+                        "map": {
+                            "id": "TCC1",
+                            "dev": 0,
                             "version": "1.0",
                             "beta": 0
                         },
@@ -473,15 +491,15 @@
                     "mediafire_quickkey": "kl4vf8ank13ml1o",
                     "playtime": 1.5,
                     "warning": {
-                        "source": "/maps/TCC1/warnings/download.md"
+                        "source": "/maps/TCC1/warnings/download_v1_1.md"
                     }
                 }
             ],
             
             "resource_pack": {
-                "map_version": "1.0",
-                "link": "https://www.mediafire.com/file/v4xo17jjwkn7185/The_Color_Complex_-_Resources.zip/file",
-                "mediafire_quickkey": "v4xo17jjwkn7185"
+                "map_version": "1.1",
+                "link": "https://www.mediafire.com/file/2iubapctph5d6b2/TCC1-v1.1_Resources.zip/file",
+                "mediafire_quickkey": "2iubapctph5d6b2"
             },
 
             "tags": [
@@ -496,7 +514,12 @@
                 },
                 {
                     "name": "PJs",
-                    "roles": ["Commands", "Datapack"],
+                    "roles": ["Datapack"],
+                    "main_team": true
+                },
+                {
+                    "name": "ReBrainer",
+                    "roles": ["Maintenance"],
                     "main_team": true
                 }
             ],
@@ -512,7 +535,10 @@
                 "source": "/maps/TCC1/server_info.md"
             },
 
+            "soundtrack_link": "https://youtu.be/IHwH8jvGRMk",
+
             "description": "/maps/TCC1/description.md",
+            "changelog": "/maps/TCC1/changelog.md",
             "hide_in_grid": false,
             "promotion": false
         }

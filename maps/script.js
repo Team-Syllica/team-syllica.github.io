@@ -147,6 +147,15 @@ async function loadArticle() {
     document.getElementById("map-walkthrough").style.display = "none";
   }
 
+  if(articleData.soundtrack_link) {
+    document.getElementById("map-soundtrack").style.display = "unset";
+    document.getElementById("map-soundtrack").onclick = function() {
+      window.open(articleData.soundtrack_link)
+    }
+  } else {
+    document.getElementById("map-soundtrack").style.display = "none";
+  }
+
   if(articleData.server_info) {
     document.getElementById("map-servers").style.display = "unset";
     if(articleData.server_info.type === 'popup') {

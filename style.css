@@ -49,6 +49,10 @@
     --button-red-hover-color: hsl(0, 100%, 63%);
     --button-red-active-color: hsl(0, 63%, 52%);
 
+    --button-magenta-color: hsl(285, 87%, 62%);
+    --button-magenta-hover-color: hsl(285, 100%, 63%);
+    --button-magenta-active-color: hsl(285, 63%, 52%);
+
     --button-discordpurple-color: hsl(235, 86%, 65%);
     --button-discordpurple-hover-color: hsl(235, 70%, 66%);
     --button-discordpurple-active-color: hsl(235, 86%, 64%);
@@ -286,6 +290,20 @@ a[href] {
 
 .download-button.button-red:active {
     background-color: var(--button-red-active-color);
+    filter: drop-shadow(0px 2px 1px black);
+}
+
+.download-button.button-magenta {
+    background-color: var(--button-magenta-color);
+    filter: drop-shadow(0px 3px 1px black);
+}
+
+.download-button.button-magenta:hover {
+    background-color: var(--button-magenta-hover-color);
+}
+
+.download-button.button-magenta:active {
+    background-color: var(--button-magenta-active-color);
     filter: drop-shadow(0px 2px 1px black);
 }
 
