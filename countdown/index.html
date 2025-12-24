@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Team Syllica | Countdown</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content="???" property="og:title">
+        <meta content="Hmmm..." property="og:description">
+        <meta content="Team Syllica" property="og:site_name">
+        <meta content="https://team-syllica.github.io/assets/img/site_thumbnail.png" property='og:image'>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="/assets/img/syllica_logo.png" id="tab-icon">
+
+        <script defer src="/script.js"></script>
+        <script defer src="./script.js"></script>
+
+        <script defer src="/assets/js/markdown-it.js"></script>
+        <script defer src="/assets/js/markdown-it-named-headers.js"></script>
+        <script defer src="/assets/js/markdown-handler.js"></script>
+
+        <script defer src="/maps/script.js"></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+
+        <div class="main-page" style="height: 100%;">
+            <div id="tkl4demo-page" style="display: inline-block; width: 100%; height: 100%; position: relative;">
+                <div class="img-container">
+                    <img src="/countdown/backgrounds/0.png" class="content-img" id="door-background">
+                    <div class="indoor-content">
+                        <button class="ctdn-button">
+                            <span>Play Demo</span>
+                        </button>
+                    </div>
+                    <img src="/countdown/foregrounds/0.png" class="content-img" id="door-foreground">
+                </div>
+                
+                <div id="tkl4demo-content" style="width: 100%; height: 100%; position: absolute; top: 0; background: radial-gradient(#00000000 25%, #000000)">
+                    <br>
+                    <h1 class="title" style="text-align: center;" id="ctdn-title">
+                        Loading...
+                    </h1>
+                    <div id="true-foreground" class="true-foreground">
+                        <button class="ctdn-button" id="map-download" style="display: none;" onclick="window.location.href = '/maps/?id=TKL4demo'">
+                            <span>Play Demo</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="our-content" class="content main-content" style="background-color: #1f1f1f;">
+            <br><br>
+            <div id="content-slideshow">
+                <div class="map-slideshow-container">
+                    <div id="map-slideshow-slides" style="width: 100%; height: 100%;">
+                        <div class="map-slideshow-slide fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img class="map-slideshow-slide-content" src="/maps/TKL4/showcase1.png">
+                        </div>
+                        <div class="map-slideshow-slide fade" style="display: flex;">
+                            <div class="numbertext">2 / 3</div>
+                            <img class="map-slideshow-slide-content" src="/maps/TKL4/showcase2.png">
+                        </div>
+                        <div class="map-slideshow-slide fade" style="display: flex;">
+                            <div class="numbertext">3 / 3</div>
+                            <img class="map-slideshow-slide-content" src="/maps/TKL4/showcase3.png">
+                        </div>
+                    </div>
+                    
+                    <a class="prev" onclick="addSlides(-1)">❮</a>
+                    <a class="next" onclick="addSlides(1)">❯</a>
+                    <div class="slideshow-progress" id="map-slideshow-progress">
+                        <span class="dot" onclick="setCurrentSlide(1)"></span> 
+                        <span class="dot" onclick="setCurrentSlide(2)"></span>
+                        <span class="dot" onclick="setCurrentSlide(3)"></span>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <br><br>
+        </div>
+
+        <footer id="footer"></footer>
+        <audio src="https://minecraft.wiki/images/Piston_contract_JE3.ogg" id="piston-audio" style="display: none;"></audio>
+    </body>
+</html>
