@@ -1,6 +1,6 @@
 .maps-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -76,11 +76,22 @@ img {vertical-align: middle;}
     background-color: var(--infocard-color);
 }
 
+.info-card-horizontal {
+    margin: 15px;
+    padding: 9px;
+    background-color: var(--infocard-color);
+    display: flex;
+}
+
 .credits-card {
     background-color: var(--infocard-subcard-color);
     padding: 8px;
     border-radius: 4px;
     margin-bottom: 4px;
+}
+
+.info-card-horizontal .credits-card {
+  width: 100%;
 }
 
 .player-face {

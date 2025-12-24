@@ -6,6 +6,7 @@ function loadGrid() {
   // Switch the page to Grid Mode
   document.getElementById("main-page-waiting").style.display = 'none';
   document.getElementById("main-page-grid").style.display = 'block';
+  document.getElementById("main-page-custom").style.display = 'none';
   document.getElementById("main-page-article").style.display = 'none';
 
   let grid = new DocumentFragment();
@@ -71,6 +72,7 @@ async function loadArticle() {
   // Switch the page to Article Mode
   document.getElementById("main-page-waiting").style.display = 'none';
   document.getElementById("main-page-grid").style.display = 'none';
+  document.getElementById("main-page-custom").style.display = 'none';
   document.getElementById("main-page-article").style.display = 'block';
 
   // Title
@@ -99,6 +101,11 @@ async function loadArticle() {
     if(articleData.tags.indexOf(tag) != articleData.tags.length-1) {
       document.getElementById("tags").appendChild(document.createTextNode(", "))
     }
+  }
+
+  // Tab icon
+  if(articleData.icon && articleData.icon.type && articleData.icon.type === 'image'){
+    document.getElementById("tab-icon").href = articleData.icon.source;
   }
 
   // Latest release info
@@ -375,6 +382,20 @@ async function loadArticle() {
   return;
 }
 
+async function loadCustom() {
+  // Loads a custom page type (e.g. not pregenerated)
+
+  // Switch the page to Custom Mode
+  document.getElementById("main-page-waiting").style.display = 'none';
+  document.getElementById("main-page-grid").style.display = 'none';
+  document.getElementById("main-page-custom").style.display = 'block';
+  document.getElementById("main-page-article").style.display = 'none';
+
+  // All the rest is taken care of in the custom html file
+  customUrl = articleData.custom_page;
+  fetch(customUrl).then(resp => resp.text()).then(text => {document.getElementById("main-page-custom").innerHTML = text});
+}
+
 async function getArticle() {
   teamData = await fetch('/team/members.json').then(response => response.json());
 
@@ -392,6 +413,13 @@ async function getArticle() {
   let data = contentData.maps.find(map => params.get("id") == map.id)
   if(data){
     articleData = data;
+
+    if(data.redirect) {
+      location.href = data.redirect;
+    } if(data.custom_page) {
+      loadCustom();
+      return false;
+    }
 
     // Determine what to do with the page
     await initializeArticle();
@@ -430,10 +458,15 @@ async function getArticle() {
     }
 
     async function initializeArticle() {
+      // Load all article data first
       await loadArticle();
-      if(params.has('walktrhough') && articleData.walkthrough_link) {
+
+      // Then interpret dependant parameters
+      if(params.has('walkthrough') && articleData.walkthrough_link) {
+        // Redirect to the walkthrough video
         location.href = articleData.walkthrough_link
       } else if(params.has('server_info') && articleData.server_info) {
+        // Show the popup or redirect, depending on the predefined type
         if(articleData.server_info.type === 'popup') {
           // Fetch data
           fetch(articleData.server_info.source).then((response) => response.text()).then((mdData) => {
@@ -444,6 +477,7 @@ async function getArticle() {
           location.href = articleData.server_info.source
         }
       } else if(params.has('shader_info') && articleData.shader_info) {
+        // Show the popup or redirect, depending on the predefined type
         if(articleData.shader_info.type === 'popup') {
           // Fetch data
           fetch(articleData.shader_info.source).then((response) => response.text()).then((mdData) => {

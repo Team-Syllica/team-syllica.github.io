@@ -7,7 +7,7 @@ The Team Syllica website, hosting all of our map content and handy guides on how
 - [`/maps/`](https://syllica.team/maps/) - All our released maps. Params:
   - `?id=TKL1` - The map page with ID "TKL1". If no ID matches content.json, this field is ignored and the maps grid is loaded instead.
   - `&shader_info` - Requires a valid Map ID, optional. Opens the Shader Info popup, if it exists.
-  - `&server_info` - Requires a valid Map ID, optional.Opens the Server Info popup, if it exists for the article. Takes priority over Shader Info.
+  - `&server_info` - Requires a valid Map ID, optional. Opens the Server Info popup, if it exists for the article. Takes priority over Shader Info.
   - `&walkthrough` - Requires a valid Map ID, optional. Redirects to the map's walkthrough video, if it exists. Takes priority over opening popups.
   - `&download` - Requires a valid Map ID, optional. Opens a download redirect. Takes priority over all others. 
     - `download=latest` - Redirects to the latest released download of the opened map.
@@ -21,8 +21,69 @@ Some JSON files are maintained on this website and can be used in external tools
 ### Maps
 All of our latest map info can very easily be accessed by reading [/maps/content.json](https://syllica.team/maps/content.json). This will allow links to things such as marketing images and icons, full Markdown versions of all changelogs, official notes on server/shader compatibility and mapmaker credits as they apear in-game. 
 
+Each map is represented in the JSON file using objects.
+```json
+{
+  "id": "MAP1", // The map's ID (shown in in-game debug codes)
+  "name": "My Map: Chapter 1", // The map's title. Will be used on the article page as the title
+  "cover": { "type": "image", "source": "/maps/MAP1/cover.png" }, // The cover image. Optional. Must be of type "image". Used to display the map in the maps grid. If unspecified, defaults to the first "image" type element in the slideshow
+  "icon": { "type": "image", "source": "/maps/MAP1/icon.png" }, // The map's icon to be displayed in the navigation bar
+
+  "releases": [ /*...*/ ], // See section below. Contains release objects
+  "resource_pack": {
+      "map_version": "1.0", // The MAP VERSION (not MC version) that the Resource Pack is for. Only one RP can be defined at a time.
+      "link": "https://www.mediafire.com/file/KEY/MAP1-v1.0_Resources.zip/file", // The link to the mediafire download
+      "mediafire_quickkey": "KEY" // The mediafire file's quickkey (used for fetching stats from the MediaFire API)
+  },
+
+  "tags": [ // Tags to be used in an upcoming search feature
+    "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho", "team_syllica"
+  ],
+
+  "credits": [
+      {
+          "name": "Person", // The person's name. /team/members.json will autofill the undeclared fields in each object according to this value
+          "roles": ["Director", "Builds", "Textures", "Music", "Storywriting", "Puzzle Design"],
+          "main_team": true // Whether this credit would appear as a main team member or not
+      },
+      {
+          "name": "NicoSlayerr",
+          "roles": ["Builds"],
+          "main_team": true,
+          "skin": "/assets/img/skins/NicoSlayerr.png"
+      }
+  ],
+  
+  "slideshow": [ // All items in this slideshow must be either youtube_embed or image.
+      { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/YT_VIDEO_ID" },
+      { "type": "image", "source": "/maps/MAP1/title.png" },
+      { "type": "image", "source": "/maps/MAP1/showcase_1.png" },
+      { "type": "image", "source": "/maps/MAP1/showcase_2.png" },
+      { "type": "image", "source": "/maps/MAP1/showcase_3.png" }
+  ],
+
+  "server_info": {
+      "type": "popup", // "popup" or "link" (required). "popup" will show a custom popup generated from a markdown file, whereas "link" will be an external redirect. 
+      "source": "/maps/MAP1/server_info.md" // The link to the source material (an external link or markdown file)
+  },
+  "shader_info": {
+      "type": "popup", // "popup" or "link" (required). "popup" will show a custom popup generated from a markdown file, whereas "link" will be an external redirect. 
+      "source": "/maps/MAP1/shader_info.md" // The link to the source material (an external link or markdown file)
+  },
+
+  "description": "/maps/MAP1/description.md", // The map's description. Will be appended before the changelog in the map's article
+  "changelog": "/maps/MAP1/changelog.md", // The changelog of the map in markdown format. Required.
+  "walkthrough_link": "link to an external page", // A link to the walkthrough (optional). If present, will show a "walkthrough" button on the map's article page
+  "promotion": false, // Whether this is included as promotional content (e.g. content not produced by Team Syllica)
+
+  "custom_page": "/maps/MAP1/page.html" // Optional. A custom HTML page that replaces the entire article.
+}
+```
+
+#### Releases
 Each map has a `releases` array, containing "release objects". Only official stable releases of each map are published on this website, betas are left in the Discord Server.
 
+Example of a release object:
 ```json
 {
     "version": {
