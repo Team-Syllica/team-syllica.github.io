@@ -449,6 +449,82 @@
             "promotion": false
         },
         {
+            "id": "TKL4demo",
+            "name": "The Kitatcho Laboratories: Chapter 4 (DEMO)",
+            "icon": { "type": "image", "source": "/maps/TKL4/demoicon.png" },
+
+            "//redirect": "/countdown/",
+            
+            "releases": [
+                {
+                    "version": {
+                        "map": {
+                            "id": "TKL4demo",
+                            "dev": false,
+                            "version": "1.0",
+                            "beta": false
+                        },
+                        "game": {
+                            "data_version": 4556,
+                            "version": "1.21.10"
+                        }
+                    },
+                    "publish_timestamp": 0,
+                    "link": "https://www.mediafire.com/file/y509fc8c9xzprvi/%2528v1.0%2529_The_Kitatcho_Laboratories_4demo.zip/file",
+                    "mediafire_quickkey": "y509fc8c9xzprvi",
+                    "playtime": 4,
+                    "warning": {
+                        "source": "/maps/TKL4/warnings/demo_v0.1.md"
+                    }
+                }
+            ],
+
+            "resource_pack": {
+                "map_version": "1.0",
+                "link": "https://www.mediafire.com/file/7a2v03ywf5pjfjb/TKL4demo-v1.0_Resources.zip/file",
+                "mediafire_quickkey": "7a2v03ywf5pjfjb"
+            },
+
+            "tags": [
+                "singleplayer", "puzzle", "custom_music", "custom_textures", "story", "kitatcho"
+            ], 
+
+            "credits": [
+                {
+                    "name": "Stockley_",
+                    "roles": ["Director", "Builds", "Textures", "Music", "Storywriting", "Puzzle Design"],
+                    "main_team": true
+                },
+                {
+                    "name": "InnominateMC",
+                    "roles": ["Voice Actor", "Environments"],
+                    "main_team": true
+                },
+                {
+                    "name": "ReBrainer",
+                    "roles": ["Commands", "Datapack", "Alpha Testing"],
+                    "main_team": true
+                },
+                {
+                    "name": "PJs",
+                    "roles": ["Commands"],
+                    "main_team": true
+                }
+            ],
+            
+            "slideshow": [
+                { "type": "youtube_embed", "source": "https://www.youtube-nocookie.com/embed/rAi35-iixPw" },
+                { "type": "image", "source": "/maps/TKL4/showcase1.png" },
+                { "type": "image", "source": "/maps/TKL4/showcase2.png" },
+                { "type": "image", "source": "/maps/TKL4/showcase3.png" }
+            ],
+
+            "description": "/maps/TKL4/demodescription.md",
+            "changelog": "/maps/TKL4/demochangelog.md",
+            "hide_in_grid": true,
+            "promotion": false
+        },
+        {
             "id": "TCC1",
             "name": "The Color Complex",
             "cover": { "type": "image", "source": "/maps/TCC1/cover.png" },
