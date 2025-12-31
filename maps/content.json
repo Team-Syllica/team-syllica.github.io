@@ -461,6 +461,26 @@
                         "map": {
                             "id": "TKL4demo",
                             "dev": false,
+                            "version": "1.1",
+                            "beta": false
+                        },
+                        "game": {
+                            "data_version": 4556,
+                            "version": "1.21.10"
+                        }
+                    },
+                    "link": "https://www.mediafire.com/file/kc9691o7ei7rhkt/%2528v1.1%2529_The_Kitatcho_Laboratories_4demo.zip/file",
+                    "mediafire_quickkey": "kc9691o7ei7rhkt",
+                    "playtime": 4,
+                    "warning": {
+                        "source": "/maps/TKL4/warnings/demo_v0.1.md"
+                    }
+                },
+                {
+                    "version": {
+                        "map": {
+                            "id": "TKL4demo",
+                            "dev": false,
                             "version": "1.0",
                             "beta": false
                         },
@@ -480,9 +500,9 @@
             ],
 
             "resource_pack": {
-                "map_version": "1.0",
-                "link": "https://www.mediafire.com/file/7a2v03ywf5pjfjb/TKL4demo-v1.0_Resources.zip/file",
-                "mediafire_quickkey": "7a2v03ywf5pjfjb"
+                "map_version": "1.1",
+                "link": "https://www.mediafire.com/file/6sqka9kwwgdr7cz/TKL4demo-v1.1_Resources.zip/file",
+                "mediafire_quickkey": "6sqka9kwwgdr7cz"
             },
 
             "tags": [
